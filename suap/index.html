@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://suap.ifsp.edu.br/edu/aluno/SP1650297/ -->
+<html lang="pt-br">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Lucas Viana Soares de Souza (SP1650297) - SUAP: Sistema Unificado de Administração Pública</title>
+
+  <meta name="keywords" content="suap, administração, pública, mec, ifrn">
+  <meta content="SUAP: Sistema Unificado de Administração Pública" name="description">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="NONE,NOARCHIVE">
+
+
+  <link rel="shortcut icon" href="https://suap.ifsp.edu.br/static/comum/img/favicon.png">
+
+
+
+
+  <link href="./suap_files/main_default.css" rel="stylesheet" type="text/css" media="all">
+
+
+
+
+
+  <script type="text/javascript" src="./suap_files/jquery.min.js.download" charset="utf-8"></script>
+
+
+  <script src="./suap_files/tinybox.js.download"></script>
+
+
+  <script src="./suap_files/jquery.ui.custom.min.js.download"></script>
+  <script type="text/javascript" src="./suap_files/jquery.ui.datepicker-pt-BR.js.download" charset="utf-8"></script>
+  <script type="text/javascript" src="./suap_files/main.js.download" charset="utf-8"></script>
+
+  <script type="text/javascript" src="./suap_files/select2.js.download" charset="utf-8"></script>
+  <link href="./suap_files/select2.min.css" rel="stylesheet" type="text/css" media="all">
+
+
+  <script type="text/javascript" src="./suap_files/nouislider.min.js.download" charset="utf-8"></script>
+
+
+
+
+  <script>
+    jQuery(document).ready(function () {
+      initAll();
+      initMenu();
+
+      /*https://stackoverflow.com/questions/42111784/how-user-will-logout-from-all-open-tabs-automatically-when-user-logs-out-in-one/42181190#42181190*/
+      window.addEventListener('storage', function (event) {
+        if (event.key == 'logout-event') {
+          window.location.replace("/accounts/logout/");
+        }
+      });
+      $(".menu-logout").click(function () {
+        localStorage.setItem('logout-event', 'logout' + Math.random());
+      });
+
+      /* Menu principal: Para dispositivos moveis */
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        jQuery("body").addClass("hideSidebar");
+      }
+
+
+      $("html").ready(function (event) {
+
+        $.ajax({
+          type: "GET",
+          url: "/comum/qtd_notificacoes_nao_lidas/",
+          success: function (response) {
+            if (parseInt(response, 10) > 99) {
+              $("#counter_notificacoes").append("<span class='counter'>99+</span>");
+            }
+            if (parseInt(response, 10) > 0) {
+              $("#counter_notificacoes").append("<span class='counter'>" + response + "</span>");
+            }
+          }
+        });
+      });
+
+
+    });
+  </script>
+
+
+
+
+
+  <script src="./suap_files/highcharts.js.download"></script>
+  <script src="./suap_files/exporting.js.download"></script>
+  <style>
+    #tabsAluno>li>a {
+      cursor: pointer;
+    }
+
+    .htmx-indicator {
+      display: none;
+    }
+
+    .htmx-request.indicator {
+      display: block;
+      padding: 5px;
+    }
+  </style>
+
+
+  <style>
+    .htmx-indicator {
+      opacity: 0;
+      transition: opacity 200ms ease-in;
+    }
+
+    .htmx-request .htmx-indicator {
+      opacity: 1
+    }
+
+    .htmx-request.htmx-indicator {
+      opacity: 1
+    }
+  </style>
+
+  <style>
+    .photo-circle img {
+      margin-top: 0% !important;
+    }
+  </style>
+</head>
+
+<body class="vsc-initialized">
+
+
+
+
+
+
+
+
+
+
+  <div class="holder">
+
+
+    <a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" class="toggleSidebar"><span class="fas fa-chevron-left"
+        aria-hidden="true"></span> <span class="sr-only">Mostrar/Esconder barra lateral</span></a>
+    <aside class="nav">
+      <header>
+        <h1><a href="https://suap.ifsp.edu.br/" title="SUAP: Sistema Unificado de Administração Pública">SUAP</a></h1>
+
+
+        <div class="notifications">
+          <a id="counter_notificacoes" href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#">
+            <span class="fas fa-bell" aria-hidden="true"></span>
+            <span class="sr-only">Notificações</span>
+          </a>
+        </div>
+
+
+
+
+        <div id="user-tools">
+
+          <a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/">
+            <div class="photo-circle small">
+              <img src="./suap_files/95018.jpg" alt="Lucas Viana">
+            </div>
+            <span>Lucas Viana</span>
+          </a>
+
+        </div>
+
+
+      </header>
+
+
+      <form id="__buscar_menu__" action="https://suap.ifsp.edu.br/edu/aluno/SP1650297/" onsubmit="return false;"
+        class="buscar_menu">
+        <input type="search" placeholder="Buscar Item de Menu" id="__filterinput__">
+      </form>
+
+
+      <nav>
+        <ul class="_main_menu">
+          <li><a href="https://suap.ifsp.edu.br/"><span class="fas fa-home" aria-hidden="true"></span>
+              <span>Início</span></a></li>
+          <li class="has-child menu-documentosprocessos"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Documentos/Processos"><i class="fas fa-documentosprocessos" aria-hidden="true"></i>
+              <span>Documentos/Processos</span></a>
+            <ul>
+              <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Documentos Eletrônicos"> <span>Documentos Eletrônicos</span></a>
+                <ul>
+                  <li class="" id="menu-item-documentosprocessos_documentoseletrônicos_dashboard"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_documentoseletr%C3%B4nicos_dashboard/documento_eletronico/dashboard/"
+                      title="Dashboard"> <span>Dashboard</span></a></li>
+                  <li class="" id="menu-item-documentosprocessos_documentoseletrônicos_documentos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_documentoseletr%C3%B4nicos_documentos/admin/documento_eletronico/documentotexto/?opcao=1"
+                      title="Documentos"> <span>Documentos</span></a></li>
+                </ul>
+              </li>
+              <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Processos Eletrônicos"> <span>Processos Eletrônicos</span></a>
+                <ul>
+                  <li class="" id="menu-item-documentosprocessos_processoseletrônicos_processos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_processoseletr%C3%B4nicos_processos/admin/processo_eletronico/processo/?opcao=1"
+                      title="Processos"> <span>Processos</span></a></li>
+                </ul>
+              </li>
+              <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Processos Físicos">
+                  <span>Processos Físicos</span></a>
+                <ul>
+                  <li class="" id="menu-item-documentosprocessos_processosfísicos_processos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_processosf%C3%ADsicos_processos/admin/protocolo/processo/"
+                      title="Processos"> <span>Processos</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-ensino"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Ensino"><i
+                class="fas fa-ensino" aria-hidden="true"></i> <span>Ensino</span></a>
+            <ul>
+              <li class="" id="menu-item-ensino_agendadedefesasdetcc"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_agendadedefesasdetcc/edu/visualizar_agenda_defesas/"
+                  title="Agenda de Defesas de TCC"> <span>Agenda de Defesas de TCC</span></a></li>
+              <li class="" id="menu-item-ensino_boletins"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_boletins/edu/boletim_aluno/"
+                  title="Boletins"> <span>Boletins</span></a></li>
+              <li class="" id="menu-item-ensino_caixademensagens"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_caixademensagens/admin/edu/mensagementrada/"
+                  title="Caixa de Mensagens"> <span>Caixa de Mensagens</span></a></li>
+              <li class="" id="menu-item-ensino_dadosdoaluno"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_dadosdoaluno/edu/meus_dados_academicos/"
+                  title="Dados do Aluno"> <span>Dados do Aluno</span></a></li>
+              <li class="" id="menu-item-ensino_locaisehoráriosdeaula"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_locaisehor%C3%A1riosdeaula/edu/locais_aula_aluno/"
+                  title="Locais e Horários de Aula"> <span>Locais e Horários de Aula</span></a></li>
+              <li class="" id="menu-item-ensino_minhasavaliações"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_minhasavalia%C3%A7%C3%B5es/edu/calendario_avaliacao/"
+                  title="Minhas Avaliações"> <span>Minhas Avaliações</span></a></li>
+              <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Processo Seletivo">
+                  <span>Processo Seletivo</span></a>
+                <ul>
+                  <li class="" id="menu-item-ensino_processoseletivo_inscriçõesparafiscal"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_processoseletivo_inscri%C3%A7%C3%B5esparafiscal/admin/processo_seletivo/inscricaofiscal/"
+                      title="Inscrições para Fiscal"> <span>Inscrições para Fiscal</span></a></li>
+                </ul>
+              </li>
+              <li class="" id="menu-item-ensino_turmasvirtuais"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_turmasvirtuais/edu/salas_virtuais/"
+                  title="Turmas Virtuais"> <span>Turmas Virtuais</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-pesquisa"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Pesquisa"><i class="fas fa-pesquisa" aria-hidden="true"></i> <span>Pesquisa</span></a>
+            <ul>
+              <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Iniciação Científica"> <span>Iniciação Científica</span></a>
+                <ul>
+                  <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Projetos">
+                      <span>Projetos</span></a>
+                    <ul>
+                      <li class="" id="menu-item-pesquisa_iniciaçãocientífica_projetos_solicitaçõesdeassinaturas"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_inicia%C3%A7%C3%A3ocient%C3%ADfica_projetos_solicita%C3%A7%C3%B5esdeassinaturas/pesquisa/solicitacoes_assinatura_formularios/"
+                          title="Solicitações de Assinaturas"> <span>Solicitações de Assinaturas</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Editora">
+                  <span>Editora</span></a>
+                <ul>
+                  <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                      title="Submissão de Obras"> <span>Submissão de Obras</span></a>
+                    <ul>
+                      <li class="" id="menu-item-pesquisa_editora_submissãodeobras_submeterobra"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_editora_submiss%C3%A3odeobras_submeterobra/pesquisa/editais_abertos_submissao_obra/"
+                          title="Submeter Obra"> <span>Submeter Obra</span></a></li>
+                      <li class="" id="menu-item-pesquisa_editora_submissãodeobras_minhasobras"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_editora_submiss%C3%A3odeobras_minhasobras/pesquisa/minhas_obras/"
+                          title="Minhas Obras"> <span>Minhas Obras</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="" id="menu-item-pesquisa_laboratórios"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_laborat%C3%B3rios/admin/pesquisa/laboratoriopesquisa/"
+                  title="Laboratórios"> <span>Laboratórios</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-gestao-de-pessoas"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Gestão de Pessoas"><i class="fas fa-gestao-de-pessoas" aria-hidden="true"></i> <span>Gestão de
+                Pessoas</span></a>
+            <ul>
+              <li class="" id="menu-item-gestãodepessoas_campi"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/gest%C3%A3odepessoas_campi/admin/rh/unidadeorganizacional/"
+                  title="Campi"> <span>Campi</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-tec-da-informacao"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Tec. da Informação"><i class="fas fa-tec-da-informacao" aria-hidden="true"></i> <span>Tec. da
+                Informação</span></a>
+            <ul>
+              <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Notificações">
+                  <span>Notificações</span></a>
+                <ul>
+                  <li class="" id="menu-item-tecdainformação_notificações_notificações"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/tecdainforma%C3%A7%C3%A3o_notifica%C3%A7%C3%B5es_notifica%C3%A7%C3%B5es/comum/notificacoes/"
+                      title="Notificações"> <span>Notificações</span></a></li>
+                  <li class="" id="menu-item-tecdainformação_notificações_preferências"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/tecdainforma%C3%A7%C3%A3o_notifica%C3%A7%C3%B5es_prefer%C3%AAncias/admin/comum/preferencianotificacao/"
+                      title="Preferências"> <span>Preferências</span></a></li>
+                </ul>
+              </li>
+              <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="E-mail do Usuário">
+                  <span>E-mail do Usuário</span></a>
+                <ul>
+                  <li class="" id="menu-item-tecdainformação_emaildousuário_meusemails"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/tecdainforma%C3%A7%C3%A3o_emaildousu%C3%A1rio_meusemails/email_usuario/meus_emails/"
+                      title="Meus E-mails"> <span>Meus E-mails</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-central-de-servicos"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Central de Serviços"><i class="fas fa-central-de-servicos" aria-hidden="true"></i> <span>Central de
+                Serviços</span></a>
+            <ul>
+              <li class="" id="menu-item-centraldeserviços_basedeconhecimentos"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/centraldeservi%C3%A7os_basedeconhecimentos/centralservicos/baseconhecimento/"
+                  title="Base de Conhecimentos"> <span>Base de Conhecimentos</span></a></li>
+              <li class="" id="menu-item-centraldeserviços_abrirchamado"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/centraldeservi%C3%A7os_abrirchamado/centralservicos/listar_area_servico/"
+                  title="Abrir Chamado"> <span>Abrir Chamado</span></a></li>
+              <li class="" id="menu-item-centraldeserviços_meuschamados"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/centraldeservi%C3%A7os_meuschamados/centralservicos/meus_chamados/?tab=ativos"
+                  title="Meus Chamados"> <span>Meus Chamados</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-atividades-estudantis"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Atividades Estudantis"><i class="fas fa-atividades-estudantis" aria-hidden="true"></i>
+              <span>Atividades Estudantis</span></a>
+            <ul>
+              <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Serviço Social">
+                  <span>Serviço Social</span></a>
+                <ul>
+                  <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Programas">
+                      <span>Programas</span></a>
+                    <ul>
+                      <li class="" id="menu-item-atividadesestudantis_serviçosocial_programas_inscrições"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_programas_inscri%C3%A7%C3%B5es/admin/ae/inscricao/"
+                          title="Inscrições"> <span>Inscrições</span></a></li>
+                      <li class="" id="menu-item-atividadesestudantis_serviçosocial_programas_acompanharrecurso"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_programas_acompanharrecurso/admin/ae/recursoatividadesestudantis/"
+                          title="Acompanhar Recurso"> <span>Acompanhar Recurso</span></a></li>
+                      <li class="" id="menu-item-atividadesestudantis_serviçosocial_programas_visualizarresultado"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_programas_visualizarresultado/ae/visualizar_resultado/"
+                          title="Visualizar Resultado"> <span>Visualizar Resultado</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="" id="menu-item-atividadesestudantis_serviçosocial_caracterizaçãosocioeconômica"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_caracteriza%C3%A7%C3%A3osocioecon%C3%B4mica/ae/caracterizacao/"
+                      title="Caracterização Socioeconômica"> <span>Caracterização Socioeconômica</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-comunicacao-social"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Comunicação Social"><i class="fas fa-comunicacao-social" aria-hidden="true"></i> <span>Comunicação
+                Social</span></a>
+            <ul>
+              <li class="" id="menu-item-comunicaçãosocial_eventos"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/comunica%C3%A7%C3%A3osocial_eventos/admin/eventos/evento/"
+                  title="Eventos"> <span>Eventos</span></a></li>
+              <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Relatórios">
+                  <span>Relatórios</span></a>
+                <ul>
+                  <li class="" id="menu-item-comunicaçãosocial_relatórios_calendáriodeeventos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/comunica%C3%A7%C3%A3osocial_relat%C3%B3rios_calend%C3%A1riodeeventos/eventos/calendario_eventos/"
+                      title="Calendário de Eventos"> <span>Calendário de Eventos</span></a></li>
+                  <li class="" id="menu-item-comunicaçãosocial_relatórios_relatóriodeeventos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/comunica%C3%A7%C3%A3osocial_relat%C3%B3rios_relat%C3%B3riodeeventos/eventos/relatorio/"
+                      title="Relatório de Eventos"> <span>Relatório de Eventos</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-extensao"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Extensão"><i class="fas fa-extensao" aria-hidden="true"></i> <span>Extensão</span></a>
+            <ul>
+              <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Egressos">
+                  <span>Egressos</span></a>
+                <ul>
+                  <li class="" id="menu-item-extensão_egressos_pesquisasdeegressorespondidas"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/extens%C3%A3o_egressos_pesquisasdeegressorespondidas/egressos/pesquisas_respondidas/"
+                      title="Pesquisas de Egresso Respondidas"> <span>Pesquisas de Egresso Respondidas</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-des-institucional"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="DES. INSTITUCIONAL"><i class="fas fa-des-institucional" aria-hidden="true"></i> <span>DES.
+                INSTITUCIONAL</span></a>
+            <ul>
+              <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Comissões e Reuniões"> <span>Comissões e Reuniões</span></a>
+                <ul>
+                  <li class="" id="menu-item-desinstitucional_comissõesereuniões_comissões"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/desinstitucional_comiss%C3%B5esereuni%C3%B5es_comiss%C3%B5es/admin/comissoes_reunioes/comissao/"
+                      title="Comissões"> <span>Comissões</span></a></li>
+                  <li class="" id="menu-item-desinstitucional_comissõesereuniões_reuniões"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/desinstitucional_comiss%C3%B5esereuni%C3%B5es_reuni%C3%B5es/admin/comissoes_reunioes/reuniao/"
+                      title="Reuniões"> <span>Reuniões</span></a></li>
+                  <li class="has-child"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Assuntos">
+                      <span>Assuntos</span></a>
+                    <ul>
+                      <li class="" id="menu-item-desinstitucional_comissõesereuniões_assuntos_consultapública"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/desinstitucional_comiss%C3%B5esereuni%C3%B5es_assuntos_consultap%C3%BAblica/comissoes_reunioes/consultar_assuntos/"
+                          title="Consulta Pública"> <span>Consulta Pública</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-logout"><a href="https://suap.ifsp.edu.br/accounts/logout/" title="Sair"><span
+                class="fas fa-sign-out-alt" aria-hidden="true"></span> <span>Sair</span></a></li>
+        </ul>
+        <ul class="" id="_menu_list_expanded" style="display: none;">
+          <li><a href="https://suap.ifsp.edu.br/"><span class="fas fa-home" aria-hidden="true"></span>
+              <span>Início</span></a></li>
+          <li class="has-child menu-documentosprocessos opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Documentos/Processos"><i class="fas fa-documentosprocessos" aria-hidden="true"></i>
+              <span>Documentos/Processos</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Documentos Eletrônicos"> <span>Documentos Eletrônicos</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-documentosprocessos_documentoseletrônicos_dashboard"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_documentoseletr%C3%B4nicos_dashboard/documento_eletronico/dashboard/"
+                      title="Dashboard"> <span>Dashboard</span></a></li>
+                  <li class="" id="menu-item-documentosprocessos_documentoseletrônicos_documentos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_documentoseletr%C3%B4nicos_documentos/admin/documento_eletronico/documentotexto/?opcao=1"
+                      title="Documentos"> <span>Documentos</span></a></li>
+                </ul>
+              </li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Processos Eletrônicos"> <span>Processos Eletrônicos</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-documentosprocessos_processoseletrônicos_processos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_processoseletr%C3%B4nicos_processos/admin/processo_eletronico/processo/?opcao=1"
+                      title="Processos"> <span>Processos</span></a></li>
+                </ul>
+              </li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Processos Físicos"> <span>Processos Físicos</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-documentosprocessos_processosfísicos_processos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_processosf%C3%ADsicos_processos/admin/protocolo/processo/"
+                      title="Processos"> <span>Processos</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-ensino opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Ensino"><i class="fas fa-ensino" aria-hidden="true"></i> <span>Ensino</span></a>
+            <ul style="display: block;">
+              <li class="" id="menu-item-ensino_agendadedefesasdetcc"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_agendadedefesasdetcc/edu/visualizar_agenda_defesas/"
+                  title="Agenda de Defesas de TCC"> <span>Agenda de Defesas de TCC</span></a></li>
+              <li class="" id="menu-item-ensino_boletins"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_boletins/edu/boletim_aluno/"
+                  title="Boletins"> <span>Boletins</span></a></li>
+              <li class="" id="menu-item-ensino_caixademensagens"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_caixademensagens/admin/edu/mensagementrada/"
+                  title="Caixa de Mensagens"> <span>Caixa de Mensagens</span></a></li>
+              <li class="" id="menu-item-ensino_dadosdoaluno"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_dadosdoaluno/edu/meus_dados_academicos/"
+                  title="Dados do Aluno"> <span>Dados do Aluno</span></a></li>
+              <li class="" id="menu-item-ensino_locaisehoráriosdeaula"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_locaisehor%C3%A1riosdeaula/edu/locais_aula_aluno/"
+                  title="Locais e Horários de Aula"> <span>Locais e Horários de Aula</span></a></li>
+              <li class="" id="menu-item-ensino_minhasavaliações"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_minhasavalia%C3%A7%C3%B5es/edu/calendario_avaliacao/"
+                  title="Minhas Avaliações"> <span>Minhas Avaliações</span></a></li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Processo Seletivo"> <span>Processo Seletivo</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-ensino_processoseletivo_inscriçõesparafiscal"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_processoseletivo_inscri%C3%A7%C3%B5esparafiscal/admin/processo_seletivo/inscricaofiscal/"
+                      title="Inscrições para Fiscal"> <span>Inscrições para Fiscal</span></a></li>
+                </ul>
+              </li>
+              <li class="" id="menu-item-ensino_turmasvirtuais"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_turmasvirtuais/edu/salas_virtuais/"
+                  title="Turmas Virtuais"> <span>Turmas Virtuais</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-pesquisa opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Pesquisa"><i class="fas fa-pesquisa" aria-hidden="true"></i> <span>Pesquisa</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Iniciação Científica"> <span>Iniciação Científica</span></a>
+                <ul style="display: block;">
+                  <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                      title="Projetos"> <span>Projetos</span></a>
+                    <ul style="display: block;">
+                      <li class="" id="menu-item-pesquisa_iniciaçãocientífica_projetos_solicitaçõesdeassinaturas"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_inicia%C3%A7%C3%A3ocient%C3%ADfica_projetos_solicita%C3%A7%C3%B5esdeassinaturas/pesquisa/solicitacoes_assinatura_formularios/"
+                          title="Solicitações de Assinaturas"> <span>Solicitações de Assinaturas</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Editora">
+                  <span>Editora</span></a>
+                <ul style="display: block;">
+                  <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                      title="Submissão de Obras"> <span>Submissão de Obras</span></a>
+                    <ul style="display: block;">
+                      <li class="" id="menu-item-pesquisa_editora_submissãodeobras_submeterobra"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_editora_submiss%C3%A3odeobras_submeterobra/pesquisa/editais_abertos_submissao_obra/"
+                          title="Submeter Obra"> <span>Submeter Obra</span></a></li>
+                      <li class="" id="menu-item-pesquisa_editora_submissãodeobras_minhasobras"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_editora_submiss%C3%A3odeobras_minhasobras/pesquisa/minhas_obras/"
+                          title="Minhas Obras"> <span>Minhas Obras</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="" id="menu-item-pesquisa_laboratórios"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_laborat%C3%B3rios/admin/pesquisa/laboratoriopesquisa/"
+                  title="Laboratórios"> <span>Laboratórios</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-gestao-de-pessoas opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Gestão de Pessoas"><i class="fas fa-gestao-de-pessoas" aria-hidden="true"></i> <span>Gestão de
+                Pessoas</span></a>
+            <ul style="display: block;">
+              <li class="" id="menu-item-gestãodepessoas_campi"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/gest%C3%A3odepessoas_campi/admin/rh/unidadeorganizacional/"
+                  title="Campi"> <span>Campi</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-tec-da-informacao opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Tec. da Informação"><i class="fas fa-tec-da-informacao" aria-hidden="true"></i> <span>Tec. da
+                Informação</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Notificações"> <span>Notificações</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-tecdainformação_notificações_notificações"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/tecdainforma%C3%A7%C3%A3o_notifica%C3%A7%C3%B5es_notifica%C3%A7%C3%B5es/comum/notificacoes/"
+                      title="Notificações"> <span>Notificações</span></a></li>
+                  <li class="" id="menu-item-tecdainformação_notificações_preferências"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/tecdainforma%C3%A7%C3%A3o_notifica%C3%A7%C3%B5es_prefer%C3%AAncias/admin/comum/preferencianotificacao/"
+                      title="Preferências"> <span>Preferências</span></a></li>
+                </ul>
+              </li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="E-mail do Usuário"> <span>E-mail do Usuário</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-tecdainformação_emaildousuário_meusemails"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/tecdainforma%C3%A7%C3%A3o_emaildousu%C3%A1rio_meusemails/email_usuario/meus_emails/"
+                      title="Meus E-mails"> <span>Meus E-mails</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-central-de-servicos opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Central de Serviços"><i class="fas fa-central-de-servicos" aria-hidden="true"></i> <span>Central de
+                Serviços</span></a>
+            <ul style="display: block;">
+              <li class="" id="menu-item-centraldeserviços_basedeconhecimentos"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/centraldeservi%C3%A7os_basedeconhecimentos/centralservicos/baseconhecimento/"
+                  title="Base de Conhecimentos"> <span>Base de Conhecimentos</span></a></li>
+              <li class="" id="menu-item-centraldeserviços_abrirchamado"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/centraldeservi%C3%A7os_abrirchamado/centralservicos/listar_area_servico/"
+                  title="Abrir Chamado"> <span>Abrir Chamado</span></a></li>
+              <li class="" id="menu-item-centraldeserviços_meuschamados"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/centraldeservi%C3%A7os_meuschamados/centralservicos/meus_chamados/?tab=ativos"
+                  title="Meus Chamados"> <span>Meus Chamados</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-atividades-estudantis opened"><a
+              href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Atividades Estudantis"><i
+                class="fas fa-atividades-estudantis" aria-hidden="true"></i> <span>Atividades Estudantis</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Serviço Social"> <span>Serviço Social</span></a>
+                <ul style="display: block;">
+                  <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                      title="Programas"> <span>Programas</span></a>
+                    <ul style="display: block;">
+                      <li class="" id="menu-item-atividadesestudantis_serviçosocial_programas_inscrições"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_programas_inscri%C3%A7%C3%B5es/admin/ae/inscricao/"
+                          title="Inscrições"> <span>Inscrições</span></a></li>
+                      <li class="" id="menu-item-atividadesestudantis_serviçosocial_programas_acompanharrecurso"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_programas_acompanharrecurso/admin/ae/recursoatividadesestudantis/"
+                          title="Acompanhar Recurso"> <span>Acompanhar Recurso</span></a></li>
+                      <li class="" id="menu-item-atividadesestudantis_serviçosocial_programas_visualizarresultado"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_programas_visualizarresultado/ae/visualizar_resultado/"
+                          title="Visualizar Resultado"> <span>Visualizar Resultado</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="" id="menu-item-atividadesestudantis_serviçosocial_caracterizaçãosocioeconômica"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_caracteriza%C3%A7%C3%A3osocioecon%C3%B4mica/ae/caracterizacao/"
+                      title="Caracterização Socioeconômica"> <span>Caracterização Socioeconômica</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-comunicacao-social opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Comunicação Social"><i class="fas fa-comunicacao-social" aria-hidden="true"></i> <span>Comunicação
+                Social</span></a>
+            <ul style="display: block;">
+              <li class="" id="menu-item-comunicaçãosocial_eventos"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/comunica%C3%A7%C3%A3osocial_eventos/admin/eventos/evento/"
+                  title="Eventos"> <span>Eventos</span></a></li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Relatórios">
+                  <span>Relatórios</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-comunicaçãosocial_relatórios_calendáriodeeventos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/comunica%C3%A7%C3%A3osocial_relat%C3%B3rios_calend%C3%A1riodeeventos/eventos/calendario_eventos/"
+                      title="Calendário de Eventos"> <span>Calendário de Eventos</span></a></li>
+                  <li class="" id="menu-item-comunicaçãosocial_relatórios_relatóriodeeventos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/comunica%C3%A7%C3%A3osocial_relat%C3%B3rios_relat%C3%B3riodeeventos/eventos/relatorio/"
+                      title="Relatório de Eventos"> <span>Relatório de Eventos</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-extensao opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Extensão"><i class="fas fa-extensao" aria-hidden="true"></i> <span>Extensão</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Egressos">
+                  <span>Egressos</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-extensão_egressos_pesquisasdeegressorespondidas"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/extens%C3%A3o_egressos_pesquisasdeegressorespondidas/egressos/pesquisas_respondidas/"
+                      title="Pesquisas de Egresso Respondidas"> <span>Pesquisas de Egresso Respondidas</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-des-institucional opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="DES. INSTITUCIONAL"><i class="fas fa-des-institucional" aria-hidden="true"></i> <span>DES.
+                INSTITUCIONAL</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Comissões e Reuniões"> <span>Comissões e Reuniões</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-desinstitucional_comissõesereuniões_comissões"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/desinstitucional_comiss%C3%B5esereuni%C3%B5es_comiss%C3%B5es/admin/comissoes_reunioes/comissao/"
+                      title="Comissões"> <span>Comissões</span></a></li>
+                  <li class="" id="menu-item-desinstitucional_comissõesereuniões_reuniões"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/desinstitucional_comiss%C3%B5esereuni%C3%B5es_reuni%C3%B5es/admin/comissoes_reunioes/reuniao/"
+                      title="Reuniões"> <span>Reuniões</span></a></li>
+                  <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                      title="Assuntos"> <span>Assuntos</span></a>
+                    <ul style="display: block;">
+                      <li class="" id="menu-item-desinstitucional_comissõesereuniões_assuntos_consultapública"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/desinstitucional_comiss%C3%B5esereuni%C3%B5es_assuntos_consultap%C3%BAblica/comissoes_reunioes/consultar_assuntos/"
+                          title="Consulta Pública"> <span>Consulta Pública</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-logout"><a href="https://suap.ifsp.edu.br/accounts/logout/" title="Sair"><span
+                class="fas fa-sign-out-alt" aria-hidden="true"></span> <span>Sair</span></a></li>
+        </ul>
+        <ul class="" id="_menu_list_expanded" style="display: none;">
+          <li><a href="https://suap.ifsp.edu.br/"><span class="fas fa-home" aria-hidden="true"></span>
+              <span>Início</span></a></li>
+          <li class="has-child menu-documentosprocessos opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Documentos/Processos"><i class="fas fa-documentosprocessos" aria-hidden="true"></i>
+              <span>Documentos/Processos</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Documentos Eletrônicos"> <span>Documentos Eletrônicos</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-documentosprocessos_documentoseletrônicos_dashboard"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_documentoseletr%C3%B4nicos_dashboard/documento_eletronico/dashboard/"
+                      title="Dashboard"> <span>Dashboard</span></a></li>
+                  <li class="" id="menu-item-documentosprocessos_documentoseletrônicos_documentos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_documentoseletr%C3%B4nicos_documentos/admin/documento_eletronico/documentotexto/?opcao=1"
+                      title="Documentos"> <span>Documentos</span></a></li>
+                </ul>
+              </li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Processos Eletrônicos"> <span>Processos Eletrônicos</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-documentosprocessos_processoseletrônicos_processos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_processoseletr%C3%B4nicos_processos/admin/processo_eletronico/processo/?opcao=1"
+                      title="Processos"> <span>Processos</span></a></li>
+                </ul>
+              </li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Processos Físicos"> <span>Processos Físicos</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-documentosprocessos_processosfísicos_processos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_processosf%C3%ADsicos_processos/admin/protocolo/processo/"
+                      title="Processos"> <span>Processos</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-ensino opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Ensino"><i class="fas fa-ensino" aria-hidden="true"></i> <span>Ensino</span></a>
+            <ul style="display: block;">
+              <li class="" id="menu-item-ensino_agendadedefesasdetcc"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_agendadedefesasdetcc/edu/visualizar_agenda_defesas/"
+                  title="Agenda de Defesas de TCC"> <span>Agenda de Defesas de TCC</span></a></li>
+              <li class="" id="menu-item-ensino_boletins"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_boletins/edu/boletim_aluno/"
+                  title="Boletins"> <span>Boletins</span></a></li>
+              <li class="" id="menu-item-ensino_caixademensagens"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_caixademensagens/admin/edu/mensagementrada/"
+                  title="Caixa de Mensagens"> <span>Caixa de Mensagens</span></a></li>
+              <li class="" id="menu-item-ensino_dadosdoaluno"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_dadosdoaluno/edu/meus_dados_academicos/"
+                  title="Dados do Aluno"> <span>Dados do Aluno</span></a></li>
+              <li class="" id="menu-item-ensino_locaisehoráriosdeaula"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_locaisehor%C3%A1riosdeaula/edu/locais_aula_aluno/"
+                  title="Locais e Horários de Aula"> <span>Locais e Horários de Aula</span></a></li>
+              <li class="" id="menu-item-ensino_minhasavaliações"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_minhasavalia%C3%A7%C3%B5es/edu/calendario_avaliacao/"
+                  title="Minhas Avaliações"> <span>Minhas Avaliações</span></a></li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Processo Seletivo"> <span>Processo Seletivo</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-ensino_processoseletivo_inscriçõesparafiscal"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_processoseletivo_inscri%C3%A7%C3%B5esparafiscal/admin/processo_seletivo/inscricaofiscal/"
+                      title="Inscrições para Fiscal"> <span>Inscrições para Fiscal</span></a></li>
+                </ul>
+              </li>
+              <li class="" id="menu-item-ensino_turmasvirtuais"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_turmasvirtuais/edu/salas_virtuais/"
+                  title="Turmas Virtuais"> <span>Turmas Virtuais</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-pesquisa opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Pesquisa"><i class="fas fa-pesquisa" aria-hidden="true"></i> <span>Pesquisa</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Iniciação Científica"> <span>Iniciação Científica</span></a>
+                <ul style="display: block;">
+                  <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                      title="Projetos"> <span>Projetos</span></a>
+                    <ul style="display: block;">
+                      <li class="" id="menu-item-pesquisa_iniciaçãocientífica_projetos_solicitaçõesdeassinaturas"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_inicia%C3%A7%C3%A3ocient%C3%ADfica_projetos_solicita%C3%A7%C3%B5esdeassinaturas/pesquisa/solicitacoes_assinatura_formularios/"
+                          title="Solicitações de Assinaturas"> <span>Solicitações de Assinaturas</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Editora">
+                  <span>Editora</span></a>
+                <ul style="display: block;">
+                  <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                      title="Submissão de Obras"> <span>Submissão de Obras</span></a>
+                    <ul style="display: block;">
+                      <li class="" id="menu-item-pesquisa_editora_submissãodeobras_submeterobra"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_editora_submiss%C3%A3odeobras_submeterobra/pesquisa/editais_abertos_submissao_obra/"
+                          title="Submeter Obra"> <span>Submeter Obra</span></a></li>
+                      <li class="" id="menu-item-pesquisa_editora_submissãodeobras_minhasobras"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_editora_submiss%C3%A3odeobras_minhasobras/pesquisa/minhas_obras/"
+                          title="Minhas Obras"> <span>Minhas Obras</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="" id="menu-item-pesquisa_laboratórios"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_laborat%C3%B3rios/admin/pesquisa/laboratoriopesquisa/"
+                  title="Laboratórios"> <span>Laboratórios</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-gestao-de-pessoas opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Gestão de Pessoas"><i class="fas fa-gestao-de-pessoas" aria-hidden="true"></i> <span>Gestão de
+                Pessoas</span></a>
+            <ul style="display: block;">
+              <li class="" id="menu-item-gestãodepessoas_campi"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/gest%C3%A3odepessoas_campi/admin/rh/unidadeorganizacional/"
+                  title="Campi"> <span>Campi</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-tec-da-informacao opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Tec. da Informação"><i class="fas fa-tec-da-informacao" aria-hidden="true"></i> <span>Tec. da
+                Informação</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Notificações"> <span>Notificações</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-tecdainformação_notificações_notificações"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/tecdainforma%C3%A7%C3%A3o_notifica%C3%A7%C3%B5es_notifica%C3%A7%C3%B5es/comum/notificacoes/"
+                      title="Notificações"> <span>Notificações</span></a></li>
+                  <li class="" id="menu-item-tecdainformação_notificações_preferências"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/tecdainforma%C3%A7%C3%A3o_notifica%C3%A7%C3%B5es_prefer%C3%AAncias/admin/comum/preferencianotificacao/"
+                      title="Preferências"> <span>Preferências</span></a></li>
+                </ul>
+              </li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="E-mail do Usuário"> <span>E-mail do Usuário</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-tecdainformação_emaildousuário_meusemails"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/tecdainforma%C3%A7%C3%A3o_emaildousu%C3%A1rio_meusemails/email_usuario/meus_emails/"
+                      title="Meus E-mails"> <span>Meus E-mails</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-central-de-servicos opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Central de Serviços"><i class="fas fa-central-de-servicos" aria-hidden="true"></i> <span>Central de
+                Serviços</span></a>
+            <ul style="display: block;">
+              <li class="" id="menu-item-centraldeserviços_basedeconhecimentos"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/centraldeservi%C3%A7os_basedeconhecimentos/centralservicos/baseconhecimento/"
+                  title="Base de Conhecimentos"> <span>Base de Conhecimentos</span></a></li>
+              <li class="" id="menu-item-centraldeserviços_abrirchamado"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/centraldeservi%C3%A7os_abrirchamado/centralservicos/listar_area_servico/"
+                  title="Abrir Chamado"> <span>Abrir Chamado</span></a></li>
+              <li class="" id="menu-item-centraldeserviços_meuschamados"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/centraldeservi%C3%A7os_meuschamados/centralservicos/meus_chamados/?tab=ativos"
+                  title="Meus Chamados"> <span>Meus Chamados</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-atividades-estudantis opened"><a
+              href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Atividades Estudantis"><i
+                class="fas fa-atividades-estudantis" aria-hidden="true"></i> <span>Atividades Estudantis</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Serviço Social"> <span>Serviço Social</span></a>
+                <ul style="display: block;">
+                  <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                      title="Programas"> <span>Programas</span></a>
+                    <ul style="display: block;">
+                      <li class="" id="menu-item-atividadesestudantis_serviçosocial_programas_inscrições"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_programas_inscri%C3%A7%C3%B5es/admin/ae/inscricao/"
+                          title="Inscrições"> <span>Inscrições</span></a></li>
+                      <li class="" id="menu-item-atividadesestudantis_serviçosocial_programas_acompanharrecurso"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_programas_acompanharrecurso/admin/ae/recursoatividadesestudantis/"
+                          title="Acompanhar Recurso"> <span>Acompanhar Recurso</span></a></li>
+                      <li class="" id="menu-item-atividadesestudantis_serviçosocial_programas_visualizarresultado"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_programas_visualizarresultado/ae/visualizar_resultado/"
+                          title="Visualizar Resultado"> <span>Visualizar Resultado</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="" id="menu-item-atividadesestudantis_serviçosocial_caracterizaçãosocioeconômica"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_caracteriza%C3%A7%C3%A3osocioecon%C3%B4mica/ae/caracterizacao/"
+                      title="Caracterização Socioeconômica"> <span>Caracterização Socioeconômica</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-comunicacao-social opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Comunicação Social"><i class="fas fa-comunicacao-social" aria-hidden="true"></i> <span>Comunicação
+                Social</span></a>
+            <ul style="display: block;">
+              <li class="" id="menu-item-comunicaçãosocial_eventos"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/comunica%C3%A7%C3%A3osocial_eventos/admin/eventos/evento/"
+                  title="Eventos"> <span>Eventos</span></a></li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Relatórios">
+                  <span>Relatórios</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-comunicaçãosocial_relatórios_calendáriodeeventos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/comunica%C3%A7%C3%A3osocial_relat%C3%B3rios_calend%C3%A1riodeeventos/eventos/calendario_eventos/"
+                      title="Calendário de Eventos"> <span>Calendário de Eventos</span></a></li>
+                  <li class="" id="menu-item-comunicaçãosocial_relatórios_relatóriodeeventos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/comunica%C3%A7%C3%A3osocial_relat%C3%B3rios_relat%C3%B3riodeeventos/eventos/relatorio/"
+                      title="Relatório de Eventos"> <span>Relatório de Eventos</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-extensao opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Extensão"><i class="fas fa-extensao" aria-hidden="true"></i> <span>Extensão</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Egressos">
+                  <span>Egressos</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-extensão_egressos_pesquisasdeegressorespondidas"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/extens%C3%A3o_egressos_pesquisasdeegressorespondidas/egressos/pesquisas_respondidas/"
+                      title="Pesquisas de Egresso Respondidas"> <span>Pesquisas de Egresso Respondidas</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-des-institucional opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="DES. INSTITUCIONAL"><i class="fas fa-des-institucional" aria-hidden="true"></i> <span>DES.
+                INSTITUCIONAL</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Comissões e Reuniões"> <span>Comissões e Reuniões</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-desinstitucional_comissõesereuniões_comissões"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/desinstitucional_comiss%C3%B5esereuni%C3%B5es_comiss%C3%B5es/admin/comissoes_reunioes/comissao/"
+                      title="Comissões"> <span>Comissões</span></a></li>
+                  <li class="" id="menu-item-desinstitucional_comissõesereuniões_reuniões"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/desinstitucional_comiss%C3%B5esereuni%C3%B5es_reuni%C3%B5es/admin/comissoes_reunioes/reuniao/"
+                      title="Reuniões"> <span>Reuniões</span></a></li>
+                  <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                      title="Assuntos"> <span>Assuntos</span></a>
+                    <ul style="display: block;">
+                      <li class="" id="menu-item-desinstitucional_comissõesereuniões_assuntos_consultapública"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/desinstitucional_comiss%C3%B5esereuni%C3%B5es_assuntos_consultap%C3%BAblica/comissoes_reunioes/consultar_assuntos/"
+                          title="Consulta Pública"> <span>Consulta Pública</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-logout"><a href="https://suap.ifsp.edu.br/accounts/logout/" title="Sair"><span
+                class="fas fa-sign-out-alt" aria-hidden="true"></span> <span>Sair</span></a></li>
+        </ul>
+        <ul class="" id="_menu_list_expanded" style="display: none;">
+          <li><a href="https://suap.ifsp.edu.br/"><span class="fas fa-home" aria-hidden="true"></span>
+              <span>Início</span></a></li>
+          <li class="has-child menu-documentosprocessos opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Documentos/Processos"><i class="fas fa-documentosprocessos" aria-hidden="true"></i>
+              <span>Documentos/Processos</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Documentos Eletrônicos"> <span>Documentos Eletrônicos</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-documentosprocessos_documentoseletrônicos_dashboard"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_documentoseletr%C3%B4nicos_dashboard/documento_eletronico/dashboard/"
+                      title="Dashboard"> <span>Dashboard</span></a></li>
+                  <li class="" id="menu-item-documentosprocessos_documentoseletrônicos_documentos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_documentoseletr%C3%B4nicos_documentos/admin/documento_eletronico/documentotexto/?opcao=1"
+                      title="Documentos"> <span>Documentos</span></a></li>
+                </ul>
+              </li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Processos Eletrônicos"> <span>Processos Eletrônicos</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-documentosprocessos_processoseletrônicos_processos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_processoseletr%C3%B4nicos_processos/admin/processo_eletronico/processo/?opcao=1"
+                      title="Processos"> <span>Processos</span></a></li>
+                </ul>
+              </li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Processos Físicos"> <span>Processos Físicos</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-documentosprocessos_processosfísicos_processos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/documentosprocessos_processosf%C3%ADsicos_processos/admin/protocolo/processo/"
+                      title="Processos"> <span>Processos</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-ensino opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Ensino"><i class="fas fa-ensino" aria-hidden="true"></i> <span>Ensino</span></a>
+            <ul style="display: block;">
+              <li class="" id="menu-item-ensino_agendadedefesasdetcc"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_agendadedefesasdetcc/edu/visualizar_agenda_defesas/"
+                  title="Agenda de Defesas de TCC"> <span>Agenda de Defesas de TCC</span></a></li>
+              <li class="" id="menu-item-ensino_boletins"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_boletins/edu/boletim_aluno/"
+                  title="Boletins"> <span>Boletins</span></a></li>
+              <li class="" id="menu-item-ensino_caixademensagens"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_caixademensagens/admin/edu/mensagementrada/"
+                  title="Caixa de Mensagens"> <span>Caixa de Mensagens</span></a></li>
+              <li class="" id="menu-item-ensino_dadosdoaluno"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_dadosdoaluno/edu/meus_dados_academicos/"
+                  title="Dados do Aluno"> <span>Dados do Aluno</span></a></li>
+              <li class="" id="menu-item-ensino_locaisehoráriosdeaula"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_locaisehor%C3%A1riosdeaula/edu/locais_aula_aluno/"
+                  title="Locais e Horários de Aula"> <span>Locais e Horários de Aula</span></a></li>
+              <li class="" id="menu-item-ensino_minhasavaliações"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_minhasavalia%C3%A7%C3%B5es/edu/calendario_avaliacao/"
+                  title="Minhas Avaliações"> <span>Minhas Avaliações</span></a></li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Processo Seletivo"> <span>Processo Seletivo</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-ensino_processoseletivo_inscriçõesparafiscal"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_processoseletivo_inscri%C3%A7%C3%B5esparafiscal/admin/processo_seletivo/inscricaofiscal/"
+                      title="Inscrições para Fiscal"> <span>Inscrições para Fiscal</span></a></li>
+                </ul>
+              </li>
+              <li class="" id="menu-item-ensino_turmasvirtuais"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_turmasvirtuais/edu/salas_virtuais/"
+                  title="Turmas Virtuais"> <span>Turmas Virtuais</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-pesquisa opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Pesquisa"><i class="fas fa-pesquisa" aria-hidden="true"></i> <span>Pesquisa</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Iniciação Científica"> <span>Iniciação Científica</span></a>
+                <ul style="display: block;">
+                  <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                      title="Projetos"> <span>Projetos</span></a>
+                    <ul style="display: block;">
+                      <li class="" id="menu-item-pesquisa_iniciaçãocientífica_projetos_solicitaçõesdeassinaturas"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_inicia%C3%A7%C3%A3ocient%C3%ADfica_projetos_solicita%C3%A7%C3%B5esdeassinaturas/pesquisa/solicitacoes_assinatura_formularios/"
+                          title="Solicitações de Assinaturas"> <span>Solicitações de Assinaturas</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Editora">
+                  <span>Editora</span></a>
+                <ul style="display: block;">
+                  <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                      title="Submissão de Obras"> <span>Submissão de Obras</span></a>
+                    <ul style="display: block;">
+                      <li class="" id="menu-item-pesquisa_editora_submissãodeobras_submeterobra"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_editora_submiss%C3%A3odeobras_submeterobra/pesquisa/editais_abertos_submissao_obra/"
+                          title="Submeter Obra"> <span>Submeter Obra</span></a></li>
+                      <li class="" id="menu-item-pesquisa_editora_submissãodeobras_minhasobras"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_editora_submiss%C3%A3odeobras_minhasobras/pesquisa/minhas_obras/"
+                          title="Minhas Obras"> <span>Minhas Obras</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="" id="menu-item-pesquisa_laboratórios"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/pesquisa_laborat%C3%B3rios/admin/pesquisa/laboratoriopesquisa/"
+                  title="Laboratórios"> <span>Laboratórios</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-gestao-de-pessoas opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Gestão de Pessoas"><i class="fas fa-gestao-de-pessoas" aria-hidden="true"></i> <span>Gestão de
+                Pessoas</span></a>
+            <ul style="display: block;">
+              <li class="" id="menu-item-gestãodepessoas_campi"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/gest%C3%A3odepessoas_campi/admin/rh/unidadeorganizacional/"
+                  title="Campi"> <span>Campi</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-tec-da-informacao opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Tec. da Informação"><i class="fas fa-tec-da-informacao" aria-hidden="true"></i> <span>Tec. da
+                Informação</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Notificações"> <span>Notificações</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-tecdainformação_notificações_notificações"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/tecdainforma%C3%A7%C3%A3o_notifica%C3%A7%C3%B5es_notifica%C3%A7%C3%B5es/comum/notificacoes/"
+                      title="Notificações"> <span>Notificações</span></a></li>
+                  <li class="" id="menu-item-tecdainformação_notificações_preferências"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/tecdainforma%C3%A7%C3%A3o_notifica%C3%A7%C3%B5es_prefer%C3%AAncias/admin/comum/preferencianotificacao/"
+                      title="Preferências"> <span>Preferências</span></a></li>
+                </ul>
+              </li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="E-mail do Usuário"> <span>E-mail do Usuário</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-tecdainformação_emaildousuário_meusemails"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/tecdainforma%C3%A7%C3%A3o_emaildousu%C3%A1rio_meusemails/email_usuario/meus_emails/"
+                      title="Meus E-mails"> <span>Meus E-mails</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-central-de-servicos opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Central de Serviços"><i class="fas fa-central-de-servicos" aria-hidden="true"></i> <span>Central de
+                Serviços</span></a>
+            <ul style="display: block;">
+              <li class="" id="menu-item-centraldeserviços_basedeconhecimentos"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/centraldeservi%C3%A7os_basedeconhecimentos/centralservicos/baseconhecimento/"
+                  title="Base de Conhecimentos"> <span>Base de Conhecimentos</span></a></li>
+              <li class="" id="menu-item-centraldeserviços_abrirchamado"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/centraldeservi%C3%A7os_abrirchamado/centralservicos/listar_area_servico/"
+                  title="Abrir Chamado"> <span>Abrir Chamado</span></a></li>
+              <li class="" id="menu-item-centraldeserviços_meuschamados"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/centraldeservi%C3%A7os_meuschamados/centralservicos/meus_chamados/?tab=ativos"
+                  title="Meus Chamados"> <span>Meus Chamados</span></a></li>
+            </ul>
+          </li>
+          <li class="has-child menu-atividades-estudantis opened"><a
+              href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Atividades Estudantis"><i
+                class="fas fa-atividades-estudantis" aria-hidden="true"></i> <span>Atividades Estudantis</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Serviço Social"> <span>Serviço Social</span></a>
+                <ul style="display: block;">
+                  <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                      title="Programas"> <span>Programas</span></a>
+                    <ul style="display: block;">
+                      <li class="" id="menu-item-atividadesestudantis_serviçosocial_programas_inscrições"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_programas_inscri%C3%A7%C3%B5es/admin/ae/inscricao/"
+                          title="Inscrições"> <span>Inscrições</span></a></li>
+                      <li class="" id="menu-item-atividadesestudantis_serviçosocial_programas_acompanharrecurso"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_programas_acompanharrecurso/admin/ae/recursoatividadesestudantis/"
+                          title="Acompanhar Recurso"> <span>Acompanhar Recurso</span></a></li>
+                      <li class="" id="menu-item-atividadesestudantis_serviçosocial_programas_visualizarresultado"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_programas_visualizarresultado/ae/visualizar_resultado/"
+                          title="Visualizar Resultado"> <span>Visualizar Resultado</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="" id="menu-item-atividadesestudantis_serviçosocial_caracterizaçãosocioeconômica"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/atividadesestudantis_servi%C3%A7osocial_caracteriza%C3%A7%C3%A3osocioecon%C3%B4mica/ae/caracterizacao/"
+                      title="Caracterização Socioeconômica"> <span>Caracterização Socioeconômica</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-comunicacao-social opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Comunicação Social"><i class="fas fa-comunicacao-social" aria-hidden="true"></i> <span>Comunicação
+                Social</span></a>
+            <ul style="display: block;">
+              <li class="" id="menu-item-comunicaçãosocial_eventos"><a
+                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/comunica%C3%A7%C3%A3osocial_eventos/admin/eventos/evento/"
+                  title="Eventos"> <span>Eventos</span></a></li>
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Relatórios">
+                  <span>Relatórios</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-comunicaçãosocial_relatórios_calendáriodeeventos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/comunica%C3%A7%C3%A3osocial_relat%C3%B3rios_calend%C3%A1riodeeventos/eventos/calendario_eventos/"
+                      title="Calendário de Eventos"> <span>Calendário de Eventos</span></a></li>
+                  <li class="" id="menu-item-comunicaçãosocial_relatórios_relatóriodeeventos"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/comunica%C3%A7%C3%A3osocial_relat%C3%B3rios_relat%C3%B3riodeeventos/eventos/relatorio/"
+                      title="Relatório de Eventos"> <span>Relatório de Eventos</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-extensao opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="Extensão"><i class="fas fa-extensao" aria-hidden="true"></i> <span>Extensão</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" title="Egressos">
+                  <span>Egressos</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-extensão_egressos_pesquisasdeegressorespondidas"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/extens%C3%A3o_egressos_pesquisasdeegressorespondidas/egressos/pesquisas_respondidas/"
+                      title="Pesquisas de Egresso Respondidas"> <span>Pesquisas de Egresso Respondidas</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="has-child menu-des-institucional opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+              title="DES. INSTITUCIONAL"><i class="fas fa-des-institucional" aria-hidden="true"></i> <span>DES.
+                INSTITUCIONAL</span></a>
+            <ul style="display: block;">
+              <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                  title="Comissões e Reuniões"> <span>Comissões e Reuniões</span></a>
+                <ul style="display: block;">
+                  <li class="" id="menu-item-desinstitucional_comissõesereuniões_comissões"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/desinstitucional_comiss%C3%B5esereuni%C3%B5es_comiss%C3%B5es/admin/comissoes_reunioes/comissao/"
+                      title="Comissões"> <span>Comissões</span></a></li>
+                  <li class="" id="menu-item-desinstitucional_comissõesereuniões_reuniões"><a
+                      href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/desinstitucional_comiss%C3%B5esereuni%C3%B5es_reuni%C3%B5es/admin/comissoes_reunioes/reuniao/"
+                      title="Reuniões"> <span>Reuniões</span></a></li>
+                  <li class="has-child opened"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"
+                      title="Assuntos"> <span>Assuntos</span></a>
+                    <ul style="display: block;">
+                      <li class="" id="menu-item-desinstitucional_comissõesereuniões_assuntos_consultapública"><a
+                          href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/desinstitucional_comiss%C3%B5esereuni%C3%B5es_assuntos_consultap%C3%BAblica/comissoes_reunioes/consultar_assuntos/"
+                          title="Consulta Pública"> <span>Consulta Pública</span></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-logout"><a href="https://suap.ifsp.edu.br/accounts/logout/" title="Sair"><span
+                class="fas fa-sign-out-alt" aria-hidden="true"></span> <span>Sair</span></a></li>
+        </ul>
+      </nav>
+
+
+
+    </aside>
+
+
+
+
+
+    <main id="content">
+
+      <div id="breadcrumbs">
+
+      </div>
+
+
+      <div class="title-container">
+        <h2>Lucas Viana Soares de Souza (SP1650297)</h2>
+        <div class="object-status"></div>
+        <div class="action-bar-container"></div>
+      </div>
+
+
+
+      <ul class="action-bar">
+
+
+
+
+
+
+        <li><a href="https://suap.ifsp.edu.br/admin/processo_eletronico/processo/?interessados__id__exact=101196"
+            class="success">Visualizar Processos de Interesse</a></li>
+
+
+        <li class="has-child">
+          <a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" class="primary">Editar</a>
+          <ul>
+
+
+            <li><a class="popup" href="https://suap.ifsp.edu.br/edu/atualizar_email_secundario/95018/">E-mail</a>
+            </li>
+
+
+
+            <li><a class="popup" href="https://suap.ifsp.edu.br/edu/atualizar_meus_dados_pessoais/SP1650297/">Dados
+                Pessoais</a></li>
+
+
+
+
+
+
+            <li><a href="https://suap.ifsp.edu.br/ae/caracterizacao/95018/" class="primary">Caracterização</a></li>
+
+
+
+            <li><a
+                href="https://suap.ifsp.edu.br/email_usuario/redefinir_senha_email/lucas.viana@aluno.ifsp.edu.br">Redefinir
+                senha do E-mail acadêmico</a></li>
+
+
+            <li><a href="https://suap.ifsp.edu.br/edu/redefinir_chave_acesso/95018/">Redefinir chave de acesso</a></li>
+
+
+          </ul>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+        <li class="has-child">
+          <a class="default" href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#">Documentos</a>
+          <ul>
+
+
+
+            <li><a class="default" href="https://suap.ifsp.edu.br/edu/grade_curricular/753/">Matriz Curricular</a></li>
+
+
+
+
+
+
+            <li><a class="default" href="https://suap.ifsp.edu.br/edu/atestado_conclusao_pdf/95018/">Atestado de
+                Conclusão de Curso</a></li>
+
+
+
+
+
+          </ul>
+        </li>
+
+
+
+
+
+
+      </ul>
+
+
+
+
+
+
+
+
+
+      <div class="box ">
+        <h3>Dados Gerais</h3>
+        <div>
+          <div class="table-responsive">
+            <div class="photo-circle big">
+              <img src="./suap_files/95018(1).jpg" alt="Foto de Lucas Viana Soares de Souza">
+            </div>
+            <div>
+              <table class="info">
+                <tbody>
+                  <tr>
+                    <td>Nome</td>
+                    <td colspan="3">Lucas Viana Soares de Souza</td>
+                    <td>Situação</td>
+                    <td>
+
+
+                      <span class="status status-success">Concluído</span>
+
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Matrícula</td>
+                    <td colspan="3">SP1650297</td>
+                    <td>Ingresso</td>
+                    <td>2023/1</td>
+                  </tr>
+                  <tr>
+                    <td>CPF</td>
+                    <td colspan="5">
+                      492.492.738-43</td>
+                  </tr>
+
+                  <tr>
+                    <td>Período Referência</td>
+                    <td colspan="3">2º</td>
+                    <td>I.R.A.</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>Curso</td>
+                    <td colspan="5">
+
+                      ADS2004 - ANÁLISE DE SISTEMAS
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Matriz</td>
+                    <td colspan="3">
+
+                      753 - Matriz curso SPO79, 2016
+
+                    </td>
+                    <td>Qtd. Períodos</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>Situação Sistêmica</td>
+                    <td colspan="3">
+                      <span class="status status-success">
+                        Ativo
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Impressão Digital</td>
+                    <td colspan="5"><span class="status status-error">Não</span></td>
+                  </tr>
+
+
+                  <tr>
+
+                    <td>Emitiu Diploma</td>
+                    <td colspan="5"><span class="status status-error">Não</span></td>
+
+                  </tr>
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div hx-indicator=".indicator">
+        <ul class="tabs with-content" id="tabsAluno">
+
+          <li class="active">
+            <a data-tab-name="dados_academicos" hx-get="/edu/aluno/SP1650297/dados-academicos/"
+              hx-target="#tab-dados_academicos" hx-trigger="load">
+              Dados Acadêmicos
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="dados_pessoais" hx-get="/edu/aluno/SP1650297/dados-pessoais/"
+              hx-target="#tab-dados_pessoais" hx-trigger="click once">
+              Dados Pessoais
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="pasta_documental" hx-get="/edu/aluno/SP1650297/pasta-documental/"
+              hx-target="#tab-pasta_documental" hx-trigger="click once">
+              Pasta Documental
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="requisitos" hx-get="/edu/aluno/SP1650297/requisitos-conclusao/"
+              hx-target="#tab-requisitos" hx-trigger="click once">
+              Requisitos de Conclusão
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="acc" hx-get="/edu/aluno/SP1650297/atividades-complementares/" hx-target="#tab-acc"
+              hx-trigger="click once">
+              Atividades Complementares
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="diplomas" hx-get="/edu/aluno/SP1650297/diplomas/" hx-target="#tab-diplomas"
+              hx-trigger="click once">
+              Diplomas/Certificados
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="projeto" hx-get="/edu/aluno/SP1650297/projeto-final/" hx-target="#tab-projeto"
+              hx-trigger="click once">
+              TCC / Relatórios
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="medidas_premiacoes" hx-get="/edu/aluno/SP1650297/medidas-premiacao/"
+              hx-target="#tab-medidas_premiacoes" hx-trigger="click once">
+              Medidas Disciplinares / Premiações
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="boletim" hx-get="/edu/aluno/SP1650297/boletins/" hx-target="#tab-boletim"
+              hx-trigger="click once">
+              Boletins
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="historico" hx-get="/edu/aluno/SP1650297/historico/" hx-target="#tab-historico"
+              hx-trigger="click once">
+              Histórico
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="caracterizacao" hx-get="/edu/aluno/SP1650297/caracterizacao/"
+              hx-target="#tab-caracterizacao" hx-trigger="click once">
+              Caracterização Socioeconômica
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="atividades_estudantis" hx-get="/edu/aluno/SP1650297/atividades-estudantis/"
+              hx-target="#tab-atividades_estudantis" hx-trigger="click once">
+              Atividades Estudantis
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="dados_bancarios" hx-get="/edu/aluno/SP1650297/dados-bancarios/"
+              hx-target="#tab-dados_bancarios" hx-trigger="click once">
+              Dados Bancários
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="estagios" hx-get="/edu/aluno/SP1650297/estagios/" hx-target="#tab-estagios"
+              hx-trigger="click once">
+              Estágios e Afins
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="locais_aula_aluno" hx-get="/edu/aluno/SP1650297/locais-aula/"
+              hx-target="#tab-locais_aula_aluno" hx-trigger="click once">
+              Locais e Horários de Aula / Atividade
+            </a>
+          </li>
+
+          <li class="">
+            <a data-tab-name="requerimentos" hx-get="/edu/aluno/SP1650297/requerimentos/" hx-target="#tab-requerimentos"
+              hx-trigger="click once">
+              Requerimentos
+            </a>
+          </li>
+
+        </ul>
+        <div class="htmx-indicator indicator">
+          <img src="./suap_files/loading.gif"> Carregando...
+        </div>
+        <div id="contentTabsAluno">
+
+          <div class="tab-container" id="tab-dados_academicos">
+            <div class="tab-wrapper">
+              <div class="box ">
+                <h3>Matrículas em Períodos - Seriado - Anual</h3>
+                <div>
+
+                  <div>
+                    <input id="exibe_frequencia" type="checkbox"
+                      hx-get="/edu/aluno/SP1650297/dados-academicos/?exibir_frequencia=1"
+                      hx-target="closest .tab-wrapper" hx-swap="outerHTML">
+                    <label for="exibe_frequencia" style="float:none">Exibir percentual de frequência e I.R.A. nos
+                      períodos</label>
+
+                    <a class="popup btn default float-right" data-reload-on-close="false"
+                      href="https://suap.ifsp.edu.br/edu/progresso_ch_por_matriculaperiodo/95018/">Progresso por
+                      Período</a>
+
+                  </div>
+                  <br>
+                  <br>
+                  <table>
+                    <thead>
+                      <tr>
+
+                        <th class="align-center">Período da Matriz (Anual)</th>
+                        <th class="align-center">Ano/Período Letivo</th>
+                        <th class="align-center">Estrutura de Curso</th>
+                        <th class="align-center">Turma</th>
+
+                        <th class="align-center">Situação no Período</th>
+
+
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                      <tr>
+
+                        <td class="align-center">
+                          2º
+                        </td>
+                        <td class="align-center">2024/1</td>
+                        <td class="align-center">
+                          Cursos de Graduação
+                        </td>
+                        <td class="align-center">
+                          20231.2.ADS2004.1M
+                        </td>
+
+                        <td class="align-center">
+                          Cursando
+                        </td>
+
+
+
+                      </tr>
+
+                      <tr>
+
+                        <td class="align-center">
+                          2º
+                        </td>
+                        <td class="align-center">2023/1</td>
+                        <td class="align-center">
+                          Cursos de Graduação
+                        </td>
+                        <td class="align-center">
+                          20231.2.ADS2004.1M
+                        </td>
+
+                        <td class="align-center">
+                          Aprovado
+                        </td>
+
+
+
+                      </tr>
+
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="box ">
+                <h3>Observações Gerais</h3>
+                <div>
+
+
+                  <p class="msg alert">Nenhuma observação cadastrada.</p>
+
+
+                </div>
+              </div>
+
+              <div class="box ">
+                <h3>Dados Acadêmicos</h3>
+                <div>
+                  <div class="table-responsive">
+                    <table class="info">
+                      <tbody>
+                        <tr>
+                          <td>Matrícula</td>
+                          <td>SP1650297</td>
+                          <td>Data da Matrícula</td>
+                          <td>01/01/2016 00:00:00</td>
+                          <td>I.R.A.</td>
+                          <td>-</td>
+                        </tr>
+                        <tr>
+                          <td>Turno</td>
+                          <td>Matutino</td>
+                          <td>Forma de Ingresso</td>
+                          <td> Ampla Concorrência (Vestibular) </td>
+                          <td>Polo EAD</td>
+                          <td>-</td>
+                        </tr>
+                        <tr>
+                          <td>Ano de Ingresso</td>
+                          <td>2023</td>
+                          <td>Período de Ingresso</td>
+                          <td>1º</td>
+                          <td>Período de Referência</td>
+                          <td>2º</td>
+                        </tr>
+                        <tr>
+                          <td>Prev. Conclusão</td>
+                          <td>2025</td>
+                          <td>Data de Conclusão</td>
+                          <td>31/12/2025</td>
+                          <td>Data da Colação</td>
+                          <td>-</td>
+                        </tr>
+
+                        <tr>
+                          <td>Código Educacenso</td>
+                          <td colspan="5">-</td>
+                        </tr>
+
+
+                        <tr>
+                          <td>% de Carga Horária Aproveitada/Certificada</td>
+                          <td colspan="5">
+                            0.E+2,00%
+
+
+                          </td>
+                        </tr>
+
+
+
+                        <tr>
+                          <td>Instituição de Origem</td>
+                          <td colspan="5"> COLÉGIO DA POLÍCIA MILITAR</td>
+                        </tr>
+                        <tr>
+                          <td>Nível de Ensino Anterior</td>
+                          <td>Fundamental</td>
+                          <td>Tipo de Instituição de Origem</td>
+                          <td>Privada</td>
+                          <td>Ano de Conclusão</td>
+                          <td>2015</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="box ">
+                <h3>Dados do Concurso</h3>
+                <div>
+                  <table class="info">
+                    <tbody>
+                      <tr>
+                        <td>Edital</td>
+                        <td>
+
+                          -
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Classificação</td>
+                        <td>
+
+                          Lista Ampla Concorrência (Vestibular) 2023/1 - 7º Lugar - ADS2004 - ANÁLISE E
+                          DESENVOLVIMENTO DE SISTEMAS INTEGRADO AO ENSINO MÉDIO
+
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+
+              <div class="box ">
+                <h3>Dados do Curso</h3>
+                <div>
+                  <table class="info">
+                    <tbody>
+                      <tr>
+                        <td>Curso</td>
+                        <td>
+
+                          ADS2004 - ANÁLISE DE SISTEMAS
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Estrutura do Curso</td>
+                        <td>
+
+                          Cursos de Graduação
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Matriz</td>
+                        <td>
+
+                          753 - 753 - Matriz curso ADS2004, 2023
+
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>Linha de pesquisa</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>Nome do Curso (Habilitação)</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>Aluno Especial?</td>
+                        <td><span class="status status-error">Não</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="box ">
+                <h3>Matrículas Relacionadas</h3>
+                <div>
+
+                  <p class="msg alert">Este aluno não tem matrículas diferentes desta.</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-container oculto" id="tab-dados_pessoais"></div>
+
+          <div class="tab-container oculto" id="tab-pasta_documental"></div>
+
+          <div class="tab-container oculto" id="tab-requisitos"></div>
+
+          <div class="tab-container oculto" id="tab-acc"></div>
+
+          <div class="tab-container oculto" id="tab-diplomas"></div>
+
+          <div class="tab-container oculto" id="tab-projeto"></div>
+
+          <div class="tab-container oculto" id="tab-medidas_premiacoes"></div>
+
+          <div class="tab-container oculto" id="tab-boletim"></div>
+
+          <div class="tab-container oculto" id="tab-historico"></div>
+
+          <div class="tab-container oculto" id="tab-caracterizacao"></div>
+
+          <div class="tab-container oculto" id="tab-atividades_estudantis"></div>
+
+          <div class="tab-container oculto" id="tab-dados_bancarios"></div>
+
+          <div class="tab-container oculto" id="tab-estagios"></div>
+
+          <div class="tab-container oculto" id="tab-locais_aula_aluno"></div>
+
+          <div class="tab-container oculto" id="tab-requerimentos"></div>
+
+        </div>
+      </div>
+
+
+
+      <ul class="action-links hide-sm">
+        <li><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" id="topodapagina"><span class="fas fa-caret-up"
+              aria-hidden="true"></span> Topo da Página</a></li>
+        <li class="action-print"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"><span class="fas fa-print"
+              aria-hidden="true"></span> Imprimir</a></li>
+        <li><a href="https://suap.ifsp.edu.br/admin/comum/sessioninfo/"><span class="fas fa-sign-in-alt"
+              aria-hidden="true"></span> Sessões</a></li>
+        <li><a href="https://suap.ifsp.edu.br/comum/alterar_contraste/"><span class="fas fa-adjust"
+              aria-hidden="true"></span> Contrastes</a></li>
+        <li><a href="https://suap.ifsp.edu.br/comum/temas/"><span class="fas fa-palette" aria-hidden="true"></span>
+            Temas</a></li>
+
+
+
+      </ul>
+
+    </main>
+
+
+
+  </div>
+
+
+  <footer>
+    <div class="float-right">
+      <dl>
+        <dt>Administração</dt>
+        <dd><a href="mailto:suporte@ifsp.edu.br">suporte@ifsp.edu.br</a></dd>
+      </dl>
+      <dl>
+        <dt>Desenvolvimento</dt>
+        <dd><a href="http://portal.ifrn.edu.br/">IFRN</a></dd>
+      </dl>
+      <dl>
+        <dt>Mantido por</dt>
+        <dd><a href="http://www.ifsp.edu.br/">IFSP</a></dd>
+      </dl>
+      <dl>
+        <dt>Servidor</dt>
+        <dd>e2f9886916b7</dd>
+      </dl>
+      <dl>
+        <dt>Última importação do SIAPE</dt>
+        <dd> 29/03/2024 </dd>
+      </dl>
+      <dl>
+        <dt>Última atualização do SUAP</dt>
+        <dd> 26/03/2024 07:17 </dd>
+      </dl>
+      <dl>
+        <dt hidden="">Desenvolvimento:</dt>
+        <dd><a href="http://www.djangoproject.com/"><img src="./suap_files/django.gif" alt="Feito com Django"></a></dd>
+      </dl>
+    </div>
+
+  </footer>
+
+  <a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#0" class="go-to-bottom">Ir para Rodapé</a>
+
+
+
+
+
+  <div id="notifications-non-read"></div>
+
+  <script>
+    jQuery(document).ready(function () {
+      open_menu_item("");
+      $(window).on("unload", function () {
+        $('input[type=submit]').removeAttr('disabled');
+      });
+
+      // remove o label padrão do django
+      var labeless = $('input.labeless');
+      labeless.prev().remove();
+      labeless.next().addClass('help_marginless');
+      labeless.next().removeClass('help');
+
+      // adicionar uma cor padrão que indica que os campos estão desabilitados
+      $('input[readonly=true]').css('background-color', '#eee');
+      $('textarea[readonly=true]').css('background-color', '#eee');
+
+
+      // reseta o formulário da página
+      $('#btn_reset_forms').click(function () {
+        $('form').each(function () {
+          this.reset();
+        });
+      });
+    });
+  </script>
+
+
+
+  <script src="./suap_files/htmx.org@1.7.0"
+    integrity="sha384-EzBXYPt0/T6gxNp0nuPtLkmRpmDBbjg6WmCUZRLXBBwYYmwAUxzlSGej0ARHX0Bo"
+    crossorigin="anonymous"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tabList = document.querySelectorAll("#tabsAluno > li");
+      const tabContentElements = document.querySelectorAll("#contentTabsAluno > div");
+      const setActive = (event) => {
+        const url = new URL(window.location)
+        url.searchParams.set("tab", event.target.dataset.tabName);
+        window.history.pushState({}, '', url);
+
+        tabList.forEach((el) => { el.classList.remove("active") });
+        tabContentElements.forEach((el) => el.classList.add("oculto"));
+        event.target.parentElement.classList.add("active");
+        document.querySelector(event.target.attributes["hx-target"].nodeValue).classList.remove("oculto");
+      }
+      tabList.forEach((el) => { el.querySelector("a").addEventListener("click", setActive) });
+    });
+    document.addEventListener("htmx:afterSettle", (event) => {
+      // Hack para reconfigurar os links de popups.
+      // Os scripts djtools/tinybox/tinibyx.js configuram os componentes de UI após o carregamento do DOM,
+      // mas não são "aware" a inserção de novos elementos no DOM.
+      replaceAddAnotherLinks();
+      initAll(event.target);
+    })
+  </script>
+
+
+
+  <div>
+    <div id="loading-tinybox" style="height: 1945px;"></div>
+    <div id="loading-tinybox-image" style="height: 825px;"></div>
+    <div id="loading-tinybox-image-wait" style="height: 945px;"></div>
+    <div id="history-cache"></div>
+  </div>
+</body>
+
+</html>
