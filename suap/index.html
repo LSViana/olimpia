@@ -467,9 +467,8 @@
               <li class="" id="menu-item-ensino_agendadedefesasdetcc"><a
                   href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_agendadedefesasdetcc/edu/visualizar_agenda_defesas/"
                   title="Agenda de Defesas de TCC"> <span>Agenda de Defesas de TCC</span></a></li>
-              <li class="" id="menu-item-ensino_boletins"><a
-                  href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_boletins/edu/boletim_aluno/"
-                  title="Boletins"> <span>Boletins</span></a></li>
+              <li class="" id="menu-item-ensino_boletins_X"><a href="/suap/boletim" title="Boletins">
+                  <span>Boletins</span></a></li>
               <li class="" id="menu-item-ensino_caixademensagens"><a
                   href="https://suap.ifsp.edu.br/djtools/breadcrumbs_reset/ensino_caixademensagens/admin/edu/mensagementrada/"
                   title="Caixa de Mensagens"> <span>Caixa de Mensagens</span></a></li>
@@ -1330,7 +1329,7 @@
                     <td>Matriz</td>
                     <td colspan="3">
 
-                      753 - Matriz curso SPO79, 2016
+                      753 - Matriz curso SPO2004, 2023
 
                     </td>
                     <td>Qtd. Períodos</td>
@@ -1532,7 +1531,7 @@
                           Cursos de Graduação
                         </td>
                         <td class="align-center">
-                          20231.2.ADS2004.1M
+                          2024.2.ADS2004.1M
                         </td>
 
                         <td class="align-center">
@@ -1546,14 +1545,14 @@
                       <tr>
 
                         <td class="align-center">
-                          2º
+                          1º
                         </td>
                         <td class="align-center">2023/1</td>
                         <td class="align-center">
                           Cursos de Graduação
                         </td>
                         <td class="align-center">
-                          20231.2.ADS2004.1M
+                          2023.1.ADS2004.1M
                         </td>
 
                         <td class="align-center">
@@ -1591,7 +1590,7 @@
                           <td>Matrícula</td>
                           <td>SP1650297</td>
                           <td>Data da Matrícula</td>
-                          <td>01/01/2016 00:00:00</td>
+                          <td>01/01/2023 00:00:00</td>
                           <td>I.R.A.</td>
                           <td>-</td>
                         </tr>
@@ -1674,7 +1673,7 @@
                         <td>
 
                           Lista Ampla Concorrência (Vestibular) 2023/1 - 7º Lugar - ADS2004 - ANÁLISE E
-                          DESENVOLVIMENTO DE SISTEMAS INTEGRADO AO ENSINO MÉDIO
+                          DESENVOLVIMENTO DE SISTEMAS
 
                         </td>
                       </tr>
@@ -1756,44 +1755,1384 @@
 
           <div class="tab-container oculto" id="tab-medidas_premiacoes"></div>
 
-          <div class="tab-container oculto" id="tab-boletim"></div>
+          <div class="tab-container oculto" id="tab-boletim">
+            <div style="display: none" class="search-and-filters">
+              <div class="filter">
+                <label>Selecione o período: </label>
+                <select id="ano_periodo" name="ano_periodo" hx-get="/edu/aluno/SP1650297/boletins/?etapa="
+                  hx-target="closest .tab-wrapper">
 
-          <div class="tab-container oculto" id="tab-historico"></div>
+                  <option value="2019_1">
+                    2019/1
+                  </option>
 
-          <div class="tab-container oculto" id="tab-caracterizacao"></div>
+                  <option value="2018_1">
+                    2018/1
+                  </option>
 
-          <div class="tab-container oculto" id="tab-atividades_estudantis"></div>
+                  <option value="2017_1">
+                    2017/1
+                  </option>
 
-          <div class="tab-container oculto" id="tab-dados_bancarios"></div>
+                  <option value="2016_1">
+                    2016/1
+                  </option>
 
-          <div class="tab-container oculto" id="tab-estagios"></div>
+                </select>
+              </div>
+            </div>
 
-          <div class="tab-container oculto" id="tab-locais_aula_aluno"></div>
+            <div class="box ">
+              <h3>Boletim - 2024/1 - Cursando</h3>
+              <div>
+                <div class="table-responsive">
+                  <ul class="action-bar">
+                    <li><a href="https://suap.ifsp.edu.br/edu/emitir_boletim_pdf/353889/">Imprimir</a></li>
+                  </ul>
 
-          <div class="tab-container oculto" id="tab-requerimentos"></div>
 
+                  Atualizado em: 30/03/2024 - 09:14
+
+                  <!-- <p class="msg info">Os alunos sem destaque não contabilizam faltas.</p> -->
+                  <table id="tabela_boletim" class="borda">
+                    <thead>
+                      <tr>
+
+                        <th rowspan="2" class="align-center">Diário</th>
+
+                        <th rowspan="2" class="align-center">Área de Conhecimento</th>
+
+                        <th rowspan="2" class="align-center">Disciplina</th>
+                        <th rowspan="2" class="align-center">C. H. Horas</th>
+                        <th rowspan="2" class="align-center">C. H. Aulas</th>
+                        <th rowspan="2" class="align-center">T. de Aulas Cumpridas</th>
+
+                        <th rowspan="2" class="align-center">T. Faltas</th>
+                        <th rowspan="2" class="align-center">% Freq.</th>
+                        <th rowspan="2" class="align-center">Situação</th>
+
+
+                        <th colspan="2" class="align-center">N1</th>
+
+
+                        <th colspan="2" class="align-center">N2</th>
+
+
+                        <th colspan="2" class="align-center">N3</th>
+                        <th colspan="2" class="align-center">N4</th>
+
+
+                        <th rowspan="2" class="align-center">MD</th>
+                        <th colspan="2" class="align-center">NAF</th>
+                        <th rowspan="2" class="align-center">MFD/<br>Conceito</th>
+                        <th rowspan="2" class="no-print align-center">Opções</th>
+                      </tr>
+                      <tr>
+
+
+                        <th class="align-center">N</th>
+                        <th class="align-center">F</th>
+
+
+                        <th class="align-center">N</th>
+                        <th class="align-center">F</th>
+
+
+                        <th class="align-center">N</th>
+                        <th class="align-center">F</th>
+                        <th class="align-center">N</th>
+                        <th class="align-center">F</th>
+
+
+                        <th class="align-center">N</th>
+                        <th class="align-center">F</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                      <tr class=" matricula_periodo_agrupamento_157783">
+                        <td class="align-center">
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/230820/">230820</a>
+                        </td>
+                        <td class="align-center">5 - Disciplinas Técnicas</td>
+                        <td>ADS.06335 (ENGS-1)
+                          - ENGENHARIA DE SOFTWARE 1 (SPO-2004-ENGS-202413)</td>
+                        <td class="align-center">42.80</td>
+                        <td class="align-center">57 Aulas</td>
+                        <td class="align-center"><span class="status status-default">-</span></td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center"><span class="status status-default">Cursando</span></td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">=</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356657/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_157783">
+                        <td class="align-center">
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/230820/">209834</a>
+                        </td>
+                        <td class="align-center">5 - Disciplinas Técnicas</td>
+                        <td>ADS.06244 (LOGP-1)
+                          - LÓGICA DE PROGRAMAÇÃO 1 (SPO-2004-LOGP-202413)</td>
+                        <td class="align-center">71.30</td>
+                        <td class="align-center">95 Aulas</td>
+                        <td class="align-center"><span class="status status-default">-</span></td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center"><span class="status status-default">Cursando</span></td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">=</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356657/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_157783">
+                        <td class="align-center">
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/230820/">211195</a>
+                        </td>
+                        <td class="align-center">5 - Disciplinas Técnicas</td>
+                        <td>ADS.06212 (ACO-1)
+                          - ORGANIZAÇÃO E ARQUITETURA DE COMPUTADORES (SPO-2004-ACO-202413)</td>
+                        <td class="align-center">71.30</td>
+                        <td class="align-center">95 Aulas</td>
+                        <td class="align-center"><span class="status status-default">-</span></td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center"><span class="status status-default">Cursando</span></td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">=</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356657/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_157783">
+                        <td class="align-center">
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/230820/">174839</a>
+                        </td>
+                        <td class="align-center">5 - Disciplinas Técnicas</td>
+                        <td>ADS.06212 (ADE-1)
+                          - ADMINISTRAÇÃO DE EMPRESAS (SPO-2004-ADE-202413)</td>
+                        <td class="align-center">28.50</td>
+                        <td class="align-center">38 Aulas</td>
+                        <td class="align-center"><span class="status status-default">-</span></td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center"><span class="status status-default">Cursando</span></td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">=</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356657/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_157783">
+                        <td class="align-center">
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/230820/">205673</a>
+                        </td>
+                        <td class="align-center">5 - Disciplinas Técnicas</td>
+                        <td>ADS.06212 (PDFS-1)
+                          - PRÁTICAS E FERRAMENTAS DE DESENVOLVIMENTO DE SOFTWARE (SPO-2004-PDFS-202413)</td>
+                        <td class="align-center">28.50</td>
+                        <td class="align-center">38 Aulas</td>
+                        <td class="align-center"><span class="status status-default">-</span></td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center"><span class="status status-default">Cursando</span></td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">=</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356657/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_157783">
+                        <td class="align-center">
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/230820/">199837</a>
+                        </td>
+                        <td class="align-center">2 - Matemática</td>
+                        <td>ADS.06212 (MATI-1)
+                          - MATEMÁTICA PARA INFORMÁTICA (SPO-2004-MATI-202413)</td>
+                        <td class="align-center">71.30</td>
+                        <td class="align-center">95 Aulas</td>
+                        <td class="align-center"><span class="status status-default">-</span></td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center"><span class="status status-default">Cursando</span></td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">=</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356657/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_157783">
+                        <td class="align-center">
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/230820/">219874</a>
+                        </td>
+                        <td class="align-center">4 - Ciências Humanas</td>
+                        <td>ADS.06212 (RHTI-1)
+                          - RECURSOS HUMANOS EM TECNOLOGIA DA INFORMAÇÃO (SPO-2004-RHTI-202413)</td>
+                        <td class="align-center">28.50</td>
+                        <td class="align-center">38 Aulas</td>
+                        <td class="align-center"><span class="status status-default">-</span></td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center"><span class="status status-default">Cursando</span></td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">=</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356657/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                    </tbody>
+
+
+                    <tfoot>
+                      <tr>
+
+                        <td colspan="3">Total</td>
+
+                        <td class="align-center">342.20 Horas</td>
+                        <td class="align-center">456 Aulas</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center" colspan="20">&nbsp;</td>
+                      </tr>
+                    </tfoot>
+
+
+                  </table>
+
+                  <script>
+                    $(document).ready(function () {
+                      checkbox = $('table#tabela_agrupamento tbody input:checkbox');
+                      checkbox.prop("checked", false);
+                    });
+                    function destacar_agrupamento(input, matricula_periodo_agrupamento_id) {
+                      tr = $('tr.matricula_periodo_agrupamento_' + matricula_periodo_agrupamento_id)
+                      tr_outros = $('table#tabela_boletim tbody tr').not('.matricula_periodo_agrupamento_' + matricula_periodo_agrupamento_id)
+                      checkbox_outros = $('table#tabela_agrupamento tbody input:checkbox').not('.checkbox_agrupamento_' + matricula_periodo_agrupamento_id)
+
+                      if (input.checked == true) {
+                        // Destaque ativo
+                        // torna visivel as linha do grupo selecionado
+                        tr.css({
+                          color: "#000",
+                        }, 2000);
+
+                        // torna não visivel as linha dos demais grupos ou sem grupo
+                        tr_outros.css({
+                          color: "#CFCFCF"
+                        }, 1000);
+
+                        // remove o 'checked' dos demais checkbox
+                        checkbox_outros.prop("checked", false);
+                      }
+                      else {
+                        // Destaque inativo
+                        // Torna visivel os outros grupos
+                        tr_outros.css({
+                          color: "#000",
+                        }, 2000);
+                      }
+                    }
+                  </script>
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="box ">
+              <h3>Boletim - 2023/1 - Aprovado</h3>
+              <div>
+                <div class="table-responsive">
+                  <ul class="action-bar">
+                    <li><a href="https://suap.ifsp.edu.br/edu/emitir_boletim_pdf/353889/">Imprimir</a></li>
+                  </ul>
+
+
+                  Atualizado em: 30/03/2024 - 09:14
+
+                  <!-- <p class="msg info">Os alunos sem destaque não contabilizam faltas.</p> -->
+                  <table id="tabela_boletim" class="borda">
+                    <thead>
+                      <tr>
+
+                        <th rowspan="2" class="align-center">Diário</th>
+
+                        <th rowspan="2" class="align-center">Área de Conhecimento</th>
+
+                        <th rowspan="2" class="align-center">Disciplina</th>
+                        <th rowspan="2" class="align-center">C. H. Horas</th>
+                        <th rowspan="2" class="align-center">C. H. Aulas</th>
+                        <th rowspan="2" class="align-center">T. de Aulas Cumpridas</th>
+
+                        <th rowspan="2" class="align-center">T. Faltas</th>
+                        <th rowspan="2" class="align-center">% Freq.</th>
+                        <th rowspan="2" class="align-center">Situação</th>
+
+
+                        <th colspan="2" class="align-center">N1</th>
+
+
+                        <th colspan="2" class="align-center">N2</th>
+
+
+                        <th colspan="2" class="align-center">N3</th>
+                        <th colspan="2" class="align-center">N4</th>
+
+
+                        <th rowspan="2" class="align-center">MD</th>
+                        <th colspan="2" class="align-center">NAF</th>
+                        <th rowspan="2" class="align-center">MFD/<br>Conceito</th>
+                        <th rowspan="2" class="no-print align-center">Opções</th>
+                      </tr>
+                      <tr>
+
+
+                        <th class="align-center">N</th>
+                        <th class="align-center">F</th>
+
+
+                        <th class="align-center">N</th>
+                        <th class="align-center">F</th>
+
+
+                        <th class="align-center">N</th>
+                        <th class="align-center">F</th>
+                        <th class="align-center">N</th>
+                        <th class="align-center">F</th>
+
+
+                        <th class="align-center">N</th>
+                        <th class="align-center">F</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                      <tr class=" matricula_periodo_agrupamento_157783">
+
+                        <td class="align-center">
+
+
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/230820/">230820</a>
+
+
+                        </td>
+
+                        <td class="align-center">5 - Disciplinas Técnicas</td>
+
+                        <td>INT.06335 (AW2-4)
+                          - APLICAÇÕES PARA WEB 2 (SPO-79-AW2-2019413)</td>
+                        <td class="align-center">85.50</td>
+                        <td class="align-center">114 Aulas</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            114
+                          </span>
+                        </td>
+
+                        <td class="align-center">19</td>
+                        <td class="align-center">83,33%</td>
+
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+
+
+
+                        <td class="align-center">9.00</td>
+                        <td class="align-center">4</td>
+
+
+                        <td class="align-center">9.50</td>
+                        <td class="align-center">3</td>
+
+
+
+
+                        <td class="align-center">9.30</td>
+                        <td class="align-center">12</td>
+                        <td class="align-center">9.80</td>
+                        <td class="align-center">0</td>
+
+
+
+
+
+
+
+                        <td class="align-center">9.40</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">0</td>
+                        <td class="align-center">9.40</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356657/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_207533">
+
+                        <td class="align-center">
+
+
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/114326/">114326</a>
+
+
+                        </td>
+
+                        <td class="align-center">1 - Linguagens</td>
+
+                        <td>INT.06244 (ART-4)
+                          - ARTES (SPO-79-ART-2019413)</td>
+                        <td class="align-center">57.00</td>
+                        <td class="align-center">76 Aulas</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            76
+                          </span>
+                        </td>
+
+                        <td class="align-center">12</td>
+                        <td class="align-center">84,21%</td>
+
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+
+
+
+                        <td class="align-center">8.00</td>
+                        <td class="align-center">4</td>
+
+
+                        <td class="align-center">9.50</td>
+                        <td class="align-center">2</td>
+
+
+
+
+                        <td class="align-center">10.00</td>
+                        <td class="align-center">6</td>
+                        <td class="align-center">10.00</td>
+                        <td class="align-center">0</td>
+
+
+
+
+
+
+
+                        <td class="align-center">9.38</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">0</td>
+                        <td class="align-center">9.38</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356650/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_201681">
+
+                        <td class="align-center">
+
+
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/121459/">121459</a>
+
+
+                        </td>
+
+                        <td class="align-center">4 - Ciências Humanas</td>
+
+                        <td>INT.06246 (FIL-4)
+                          - FILOSOFIA (SPO-79-FIL-2019413)</td>
+                        <td class="align-center">57.00</td>
+                        <td class="align-center">76 Aulas</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            76
+                          </span>
+                        </td>
+
+                        <td class="align-center">8</td>
+                        <td class="align-center">89,47%</td>
+
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+
+
+
+                        <td class="align-center">9.00</td>
+                        <td class="align-center">2</td>
+
+
+                        <td class="align-center">9.70</td>
+                        <td class="align-center">0</td>
+
+
+
+
+                        <td class="align-center">8.50</td>
+                        <td class="align-center">4</td>
+                        <td class="align-center">9.00</td>
+                        <td class="align-center">2</td>
+
+
+
+
+
+
+
+                        <td class="align-center">9.05</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">0</td>
+                        <td class="align-center">9.05</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356656/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_201681">
+
+                        <td class="align-center">
+
+
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/128137/">128137</a>
+
+
+                        </td>
+
+                        <td class="align-center">4 - Ciências Humanas</td>
+
+                        <td>INT.06249 (GEO-4)
+                          - GEOGRAFIA (SPO-79-GEO-2019413)</td>
+                        <td class="align-center">57.00</td>
+                        <td class="align-center">76 Aulas</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            76
+                          </span>
+                        </td>
+
+                        <td class="align-center">8</td>
+                        <td class="align-center">89,47%</td>
+
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+
+
+
+                        <td class="align-center">7.50</td>
+                        <td class="align-center">0</td>
+
+
+                        <td class="align-center">9.00</td>
+                        <td class="align-center">0</td>
+
+
+
+
+                        <td class="align-center">7.00</td>
+                        <td class="align-center">4</td>
+                        <td class="align-center">9.00</td>
+                        <td class="align-center">4</td>
+
+
+
+
+
+
+
+                        <td class="align-center">8.12</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">0</td>
+                        <td class="align-center">8.12</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356659/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_157783">
+
+                        <td class="align-center">
+
+
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/119076/">119076</a>
+
+
+                        </td>
+
+                        <td class="align-center">5 - Disciplinas Técnicas</td>
+
+                        <td>INT.06253 (GEI-4)
+                          - GESTÃO INDUSTRIAL (SPO-79-GEI-2019413)</td>
+                        <td class="align-center">57.00</td>
+                        <td class="align-center">76 Aulas</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            76
+                          </span>
+                        </td>
+
+                        <td class="align-center">18</td>
+                        <td class="align-center">76,31%</td>
+
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+
+
+
+                        <td class="align-center">9.40</td>
+                        <td class="align-center">2</td>
+
+
+                        <td class="align-center">8.60</td>
+                        <td class="align-center">6</td>
+
+
+
+
+                        <td class="align-center">8.60</td>
+                        <td class="align-center">6</td>
+                        <td class="align-center">8.70</td>
+                        <td class="align-center">4</td>
+
+
+
+
+
+
+
+                        <td class="align-center">8.82</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">0</td>
+                        <td class="align-center">8.82</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356654/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_201681">
+
+                        <td class="align-center">
+
+
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/127568/">127568</a>
+
+
+                        </td>
+
+                        <td class="align-center">4 - Ciências Humanas</td>
+
+                        <td>INT.06248 (HIS-4)
+                          - HISTÓRIA (SPO-79-HIS-2019413)</td>
+                        <td class="align-center">57.00</td>
+                        <td class="align-center">76 Aulas</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            76
+                          </span>
+                        </td>
+
+                        <td class="align-center">6</td>
+                        <td class="align-center">92,10%</td>
+
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+
+
+
+                        <td class="align-center">9.00</td>
+                        <td class="align-center">0</td>
+
+
+                        <td class="align-center">10.00</td>
+                        <td class="align-center">0</td>
+
+
+
+
+                        <td class="align-center">9.00</td>
+                        <td class="align-center">6</td>
+                        <td class="align-center">8.50</td>
+                        <td class="align-center">0</td>
+
+
+
+
+
+
+
+                        <td class="align-center">9.12</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">0</td>
+                        <td class="align-center">9.12</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356658/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_207533">
+
+                        <td class="align-center">
+
+
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/232763/">232763</a>
+
+
+                        </td>
+
+                        <td class="align-center">1 - Linguagens</td>
+
+                        <td>INT.06243 (LPL-4)
+                          - LÍNGUA PORTUGUESA E LITERATURA BRASILEIRA (SPO-79-LPL-2019413)</td>
+                        <td class="align-center">85.50</td>
+                        <td class="align-center">114 Aulas</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            114
+                          </span>
+                        </td>
+
+                        <td class="align-center">9</td>
+                        <td class="align-center">92,10%</td>
+
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+
+
+
+                        <td class="align-center">8.50</td>
+                        <td class="align-center">0</td>
+
+
+                        <td class="align-center">7.50</td>
+                        <td class="align-center">6</td>
+
+
+
+
+                        <td class="align-center">8.50</td>
+                        <td class="align-center">3</td>
+                        <td class="align-center">8.50</td>
+                        <td class="align-center">0</td>
+
+
+
+
+
+
+
+                        <td class="align-center">8.25</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">0</td>
+                        <td class="align-center">8.25</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356655/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_142513">
+
+                        <td class="align-center">
+
+
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/114952/">114952</a>
+
+
+                        </td>
+
+                        <td class="align-center">2 - Matemática</td>
+
+                        <td>INT.06245 (EAM-4)
+                          - MATEMÁTICA APLICADA E ESTATÍSTICA (SPO-79-EAM-2019413)</td>
+                        <td class="align-center">57.00</td>
+                        <td class="align-center">76 Aulas</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            76
+                          </span>
+                        </td>
+
+                        <td class="align-center">6</td>
+                        <td class="align-center">92,10%</td>
+
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+
+
+
+                        <td class="align-center">10.00</td>
+                        <td class="align-center">0</td>
+
+
+                        <td class="align-center">10.00</td>
+                        <td class="align-center">2</td>
+
+
+
+
+                        <td class="align-center">9.50</td>
+                        <td class="align-center">2</td>
+                        <td class="align-center">10.00</td>
+                        <td class="align-center">2</td>
+
+
+
+
+
+
+
+                        <td class="align-center">9.88</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">0</td>
+                        <td class="align-center">9.88</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356651/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_157783">
+
+                        <td class="align-center">
+
+
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/230741/">230741</a>
+
+
+                        </td>
+
+                        <td class="align-center">5 - Disciplinas Técnicas</td>
+
+                        <td>INT.06334 (PDS-4)
+                          - PRÁTICA PARA DESENVOLVIMENTO DE SISTEMAS (SPO-79-PDS-2019413)</td>
+                        <td class="align-center">142.50</td>
+                        <td class="align-center">190 Aulas</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            190
+                          </span>
+                        </td>
+
+                        <td class="align-center">22</td>
+                        <td class="align-center">88,42%</td>
+
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+
+
+
+                        <td class="align-center">9.00</td>
+                        <td class="align-center">2</td>
+
+
+                        <td class="align-center">9.50</td>
+                        <td class="align-center">0</td>
+
+
+
+
+                        <td class="align-center">8.50</td>
+                        <td class="align-center">20</td>
+                        <td class="align-center">10.00</td>
+                        <td class="align-center">0</td>
+
+
+
+
+
+
+
+                        <td class="align-center">9.25</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">0</td>
+                        <td class="align-center">9.25</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356653/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_157783">
+
+                        <td class="align-center">
+
+
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/230821/">230821</a>
+
+
+                        </td>
+
+                        <td class="align-center">5 - Disciplinas Técnicas</td>
+
+                        <td>INT.06336 (SIN-4)
+                          - SEGURANÇA DA INFORMAÇÃO (SPO-79-SIN-2019413)</td>
+                        <td class="align-center">57.00</td>
+                        <td class="align-center">76 Aulas</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            76
+                          </span>
+                        </td>
+
+                        <td class="align-center">13</td>
+                        <td class="align-center">82,89%</td>
+
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+
+
+
+                        <td class="align-center">10.00</td>
+                        <td class="align-center">2</td>
+
+
+                        <td class="align-center">8.00</td>
+                        <td class="align-center">3</td>
+
+
+
+
+                        <td class="align-center">8.60</td>
+                        <td class="align-center">6</td>
+                        <td class="align-center">10.00</td>
+                        <td class="align-center">2</td>
+
+
+
+
+
+
+
+                        <td class="align-center">9.15</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">0</td>
+                        <td class="align-center">9.15</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356649/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                      <tr class=" matricula_periodo_agrupamento_201681">
+
+                        <td class="align-center">
+
+
+                          <a href="https://suap.ifsp.edu.br/edu/sala_virtual/115398/">115398</a>
+
+
+                        </td>
+
+                        <td class="align-center">4 - Ciências Humanas</td>
+
+                        <td>INT.06247 (SOC-4)
+                          - SOCIOLOGIA (SPO-79-SOC-2019413)</td>
+                        <td class="align-center">57.00</td>
+                        <td class="align-center">76 Aulas</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            76
+                          </span>
+                        </td>
+
+                        <td class="align-center">10</td>
+                        <td class="align-center">86,84%</td>
+
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+
+
+
+                        <td class="align-center">10.00</td>
+                        <td class="align-center">0</td>
+
+
+                        <td class="align-center">10.00</td>
+                        <td class="align-center">2</td>
+
+
+
+
+                        <td class="align-center">9.00</td>
+                        <td class="align-center">4</td>
+                        <td class="align-center">9.50</td>
+                        <td class="align-center">4</td>
+
+
+
+
+
+
+
+                        <td class="align-center">9.62</td>
+                        <td class="align-center">-</td>
+                        <td class="align-center">0</td>
+                        <td class="align-center">9.62</td>
+                        <td class="no-print align-center"><a
+                            href="https://suap.ifsp.edu.br/edu/detalhar_matricula_diario_boletim/95018/4356652/"
+                            class="btn popup" data-reload-on-close="False">Detalhar</a></td>
+
+
+                      </tr>
+
+                    </tbody>
+
+
+                    <tfoot>
+                      <tr>
+
+                        <td colspan="3">Total</td>
+
+                        <td class="align-center">769.50 Horas</td>
+                        <td class="align-center">1026 Aulas</td>
+                        <td class="align-center">1026</td>
+                        <td class="align-center">131</td>
+                        <td class="align-center">87,23%</td>
+                        <td class="align-center" colspan="20">&nbsp;</td>
+                      </tr>
+                    </tfoot>
+
+
+                  </table>
+
+
+
+                  <div class="msg info">
+                    <p>O critério de aprovação no período considera Área de Conhecimento das componentes:</p>
+                    <ul>
+                      <li>A média das notas de cada agrupamento está sendo considerada (média do agrupamento).</li>
+
+                      <li>O percentual de frequência de todos os agrupamentos está sendo considerado (frequência total
+                        entre os
+                        agrupamentos).</li>
+
+                    </ul>
+                  </div>
+                  <table id="tabela_agrupamento" class="borda">
+                    <thead>
+                      <tr>
+                        <th rowspan="2" class="align-center">Destacar</th>
+                        <th rowspan="2" class="align-center">Código</th>
+                        <th rowspan="2" class="align-center">Área de Conhecimento</th>
+                        <th rowspan="2" class="align-center">Período</th>
+                        <th rowspan="2" class="align-center">C. H. Aulas</th>
+                        <th rowspan="2" class="align-center">T. Aulas Cumpridas</th>
+                        <th rowspan="2" class="align-center">T. Faltas</th>
+                        <th rowspan="2" class="align-center">% Freq.</th>
+                        <th rowspan="2" class="align-center">Média</th>
+                        <th rowspan="2" class="align-center">Situação</th>
+                        <th rowspan="2" class="align-center">Em Conselho</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                      <tr>
+                        <td class="align-center">
+                          <input type="checkbox" class="checkbox_agrupamento_207533"
+                            onclick="destacar_agrupamento(this, 207533)">
+                        </td>
+                        <td class="align-center">207533</td>
+                        <td class="align-center">1 - Linguagens</td>
+                        <td class="align-center">4</td>
+                        <td class="align-center">190</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            190
+                          </span>
+                        </td>
+                        <td class="align-center">21</td>
+                        <td class="align-center">87,00%</td>
+                        <td class="align-center">8,82</td>
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+                        <td class="align-center">
+                          <span class="status status-info">
+
+                            Não
+
+                          </span>
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td class="align-center">
+                          <input type="checkbox" class="checkbox_agrupamento_142513"
+                            onclick="destacar_agrupamento(this, 142513)">
+                        </td>
+                        <td class="align-center">142513</td>
+                        <td class="align-center">2 - Matemática</td>
+                        <td class="align-center">4</td>
+                        <td class="align-center">76</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            76
+                          </span>
+                        </td>
+                        <td class="align-center">6</td>
+                        <td class="align-center">87,00%</td>
+                        <td class="align-center">9,88</td>
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+                        <td class="align-center">
+                          <span class="status status-info">
+
+                            Não
+
+                          </span>
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td class="align-center">
+                          <input type="checkbox" class="checkbox_agrupamento_201681"
+                            onclick="destacar_agrupamento(this, 201681)">
+                        </td>
+                        <td class="align-center">201681</td>
+                        <td class="align-center">4 - Ciências Humanas</td>
+                        <td class="align-center">4</td>
+                        <td class="align-center">304</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            304
+                          </span>
+                        </td>
+                        <td class="align-center">32</td>
+                        <td class="align-center">87,00%</td>
+                        <td class="align-center">8,98</td>
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+                        <td class="align-center">
+                          <span class="status status-info">
+
+                            Não
+
+                          </span>
+                        </td>
+
+                      </tr>
+
+                      <tr>
+                        <td class="align-center">
+                          <input type="checkbox" class="checkbox_agrupamento_157783"
+                            onclick="destacar_agrupamento(this, 157783)">
+                        </td>
+                        <td class="align-center">157783</td>
+                        <td class="align-center">5 - Disciplinas Técnicas</td>
+                        <td class="align-center">4</td>
+                        <td class="align-center">456</td>
+                        <td class="align-center">
+                          <span class="status status-success">
+                            456
+                          </span>
+                        </td>
+                        <td class="align-center">72</td>
+                        <td class="align-center">87,00%</td>
+                        <td class="align-center">9,16</td>
+                        <td class="align-center"><span class="status status-success">Aprovado</span></td>
+                        <td class="align-center">
+                          <span class="status status-info">
+
+                            Não
+
+                          </span>
+                        </td>
+
+                      </tr>
+
+                    </tbody>
+
+                    <tfoot>
+                      <tr>
+
+                        <td colspan="4">Total</td>
+                        <td class="align-center">1026</td>
+                        <td class="align-center">1026</td>
+                        <td class="align-center">131</td>
+                        <td class="align-center">87.00%</td>
+                        <td class="align-center" colspan="20">&nbsp;</td>
+
+                      </tr>
+                    </tfoot>
+
+                  </table>
+
+                  <script>
+                    $(document).ready(function () {
+                      checkbox = $('table#tabela_agrupamento tbody input:checkbox');
+                      checkbox.prop("checked", false);
+                    });
+                    function destacar_agrupamento(input, matricula_periodo_agrupamento_id) {
+                      tr = $('tr.matricula_periodo_agrupamento_' + matricula_periodo_agrupamento_id)
+                      tr_outros = $('table#tabela_boletim tbody tr').not('.matricula_periodo_agrupamento_' + matricula_periodo_agrupamento_id)
+                      checkbox_outros = $('table#tabela_agrupamento tbody input:checkbox').not('.checkbox_agrupamento_' + matricula_periodo_agrupamento_id)
+
+                      if (input.checked == true) {
+                        // Destaque ativo
+                        // torna visivel as linha do grupo selecionado
+                        tr.css({
+                          color: "#000",
+                        }, 2000);
+
+                        // torna não visivel as linha dos demais grupos ou sem grupo
+                        tr_outros.css({
+                          color: "#CFCFCF"
+                        }, 1000);
+
+                        // remove o 'checked' dos demais checkbox
+                        checkbox_outros.prop("checked", false);
+                      }
+                      else {
+                        // Destaque inativo
+                        // Torna visivel os outros grupos
+                        tr_outros.css({
+                          color: "#000",
+                        }, 2000);
+                      }
+                    }
+                  </script>
+
+
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
+
+        <div class="tab-container oculto" id="tab-historico"></div>
+
+        <div class="tab-container oculto" id="tab-caracterizacao"></div>
+
+        <div class="tab-container oculto" id="tab-atividades_estudantis"></div>
+
+        <div class="tab-container oculto" id="tab-dados_bancarios"></div>
+
+        <div class="tab-container oculto" id="tab-estagios"></div>
+
+        <div class="tab-container oculto" id="tab-locais_aula_aluno"></div>
+
+        <div class="tab-container oculto" id="tab-requerimentos"></div>
+
       </div>
+  </div>
 
 
 
-      <ul class="action-links hide-sm">
-        <li><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" id="topodapagina"><span class="fas fa-caret-up"
-              aria-hidden="true"></span> Topo da Página</a></li>
-        <li class="action-print"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"><span class="fas fa-print"
-              aria-hidden="true"></span> Imprimir</a></li>
-        <li><a href="https://suap.ifsp.edu.br/admin/comum/sessioninfo/"><span class="fas fa-sign-in-alt"
-              aria-hidden="true"></span> Sessões</a></li>
-        <li><a href="https://suap.ifsp.edu.br/comum/alterar_contraste/"><span class="fas fa-adjust"
-              aria-hidden="true"></span> Contrastes</a></li>
-        <li><a href="https://suap.ifsp.edu.br/comum/temas/"><span class="fas fa-palette" aria-hidden="true"></span>
-            Temas</a></li>
+  <ul class="action-links hide-sm">
+    <li><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#" id="topodapagina"><span class="fas fa-caret-up"
+          aria-hidden="true"></span> Topo da Página</a></li>
+    <li class="action-print"><a href="https://suap.ifsp.edu.br/edu/aluno/SP1650297/#"><span class="fas fa-print"
+          aria-hidden="true"></span> Imprimir</a></li>
+    <li><a href="https://suap.ifsp.edu.br/admin/comum/sessioninfo/"><span class="fas fa-sign-in-alt"
+          aria-hidden="true"></span> Sessões</a></li>
+    <li><a href="https://suap.ifsp.edu.br/comum/alterar_contraste/"><span class="fas fa-adjust"
+          aria-hidden="true"></span> Contrastes</a></li>
+    <li><a href="https://suap.ifsp.edu.br/comum/temas/"><span class="fas fa-palette" aria-hidden="true"></span>
+        Temas</a></li>
 
 
 
-      </ul>
+  </ul>
 
-    </main>
+  </main>
 
 
 
